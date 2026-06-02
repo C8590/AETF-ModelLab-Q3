@@ -1,0 +1,18 @@
+model:
+  model_name: "NeoQuasar/Kronos-small"
+  tokenizer_name: "NeoQuasar/Kronos-Tokenizer-base"
+  device: "cuda:0"
+  max_context: 512
+  hf_cache_dir: "models/kronos/hf_cache"
+
+inference:
+  default_lookback: 400
+  default_pred_len: 120
+  default_T: 1.0
+  default_top_p: 0.9
+  default_sample_count: 1
+
+safety:
+  allow_trading_signal: false
+  allow_order_execution: false
+  allow_finetune: false
