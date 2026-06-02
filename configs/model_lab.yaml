@@ -1,0 +1,38 @@
+project:
+  name: AETF-ModelLab
+  role: AETF 左侧 ETF 策略 AI 影子预测实验室
+  version: V0.1-scaffold
+
+paths:
+  # 按本机实际路径修改。左侧路径只读，不允许写入。
+  left_project_root_windows: "E:/AETF-LeftLab"
+  model_lab_root_windows: "E:/AETF-ModelLab"
+  left_project_root_macos: "/Users/a1/Developer/A-ETF-L"
+  model_lab_root_macos: "/Users/a1/Developer/AETF-ModelLab"
+
+io:
+  left_candidates: "data/input/left_candidates.csv"
+  watchlist: "data/input/watchlist.csv"
+  positions: "data/input/positions.csv"
+  etf_daily_k: "data/input/etf_daily_k.csv"
+  risk_warning: "data/input/risk_warning.csv"
+  sector_map: "data/input/sector_map.csv"
+  daily_forecast: "outputs/kronos_daily_forecast.csv"
+  shadow_features: "outputs/kronos_shadow_features.csv"
+  shadow_report: "outputs/kronos_shadow_report.md"
+
+runtime:
+  python_min: "3.10"
+  default_device: "cuda"
+  cpu_fallback: true
+  log_file: "logs/model_lab_run.log"
+
+safety:
+  read_left_project_only: true
+  never_modify_left_signal: true
+  never_modify_buy_rules: true
+  never_modify_risk_rules: true
+  never_modify_positions: true
+  never_auto_trade: true
+  never_connect_qmt_phase_1: true
+  never_upload_strategy_data: true

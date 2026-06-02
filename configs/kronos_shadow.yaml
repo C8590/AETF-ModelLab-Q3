@@ -1,0 +1,33 @@
+model:
+  repo_url: "https://github.com/shiyu-coder/Kronos"
+  default_model_name: "Kronos-small"
+  tokenizer_name: "NeoQuasar/Kronos-Tokenizer-base"
+  predictor_name: "NeoQuasar/Kronos-small"
+  max_context: 512
+
+inference:
+  lookback: 240
+  pred_len: 10
+  sample_count: 3
+  temperature: 1.0
+  top_p: 0.9
+  device: "cuda"
+  batch_size_4060ti_8gb: 16
+  batch_size_4060ti_16gb: 64
+  cpu_fallback: true
+
+shadow_rules:
+  max_drawdown_5d_warn: -0.03
+  expected_upside_support: 0.015
+  rr_support: 1.5
+  rr_wait: 1.0
+  risk_block_levels: ["R4", "P0"]
+  risk_no_upgrade_levels: ["R2", "R3"]
+
+actions:
+  support_probe: "SUPPORT_PROBE"
+  wait: "WAIT"
+  risk_of_breakdown: "RISK_OF_BREAKDOWN"
+  conflict: "CONFLICT"
+  no_signal: "NO_SIGNAL"
+  error: "ERROR"
