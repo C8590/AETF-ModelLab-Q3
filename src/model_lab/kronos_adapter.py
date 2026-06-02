@@ -3,11 +3,16 @@ from __future__ import annotations
 from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
+import sys
 from typing import Any
 
 import pandas as pd
 
 from .validation import ETF_DAILY_K_REQUIRED, require_columns
+
+
+KRONOS_SAMPLE_REQUIRED = ["timestamps", "open", "high", "low", "close"]
+KRONOS_SAMPLE_OPTIONAL = ["volume", "amount"]
 
 
 @dataclass
@@ -16,13 +21,49 @@ class KronosConfig:
     tokenizer_name: str = "NeoQuasar/Kronos-Tokenizer-base"
     predictor_name: str = "NeoQuasar/Kronos-small"
     max_context: int = 512
-    lookback: int = 240
-    pred_len: int = 10
-    sample_count: int = 3
+    lookback: int = 400
+    pred_len: int = 120
+    sample_count: int = 1
     temperature: float = 1.0
     top_p: float = 0.9
-    device: str = "cuda"
+    device: str = "cuda:0"
     external_repo_path: Path = Path("external/Kronos")
+    hf_cache_dir: Path = Path("models/kronos/hf_cache")
+
+
+def resolve_kronos_root(project_root: Path | None = None) -> Path:
+    root = project_root or Path(__file__).resolve().parents[2]
+    return (root / "external" / "Kronos").resolve()
+
+
+def ensure_kronos_import_path(kronos_root: Path) -> None:
+    root_str = str(kronos_root.resolve())
+    if root_str not in sys.path:
+        sys.path.insert(0, root_str)
+
+
+def official_kronos_sample_path(project_root: Path | None = None) -> Path:
+    return resolve_kronos_root(project_root) / "tests" / "data" / "regression_input.csv"
+
+
+def validate_kronos_ohlcv_sample(df: pd.DataFrame, name: str = "Kronos sample") -> None:
+    require_columns(df, KRONOS_SAMPLE_REQUIRED, name)
+    if df[KRONOS_SAMPLE_REQUIRED].isnull().values.any():
+        raise ValueError(f"{name} contains NaN values in required Kronos columns.")
+    if "volume" in df.columns and "amount" not in df.columns:
+        return
+    if "amount" in df.columns and "volume" not in df.columns:
+        return
+    optional_present = [col for col in KRONOS_SAMPLE_OPTIONAL if col in df.columns]
+    if optional_present and df[optional_present].isnull().values.any():
+        raise ValueError(f"{name} contains NaN values in optional volume/amount columns.")
+
+
+def write_markdown_report(output_path: str | Path, title: str, lines: list[str]) -> None:
+    path = Path(output_path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    body = [f"# {title}", "", *lines]
+    path.write_text("\n".join(body).rstrip() + "\n", encoding="utf-8")
 
 
 class KronosAdapter:
@@ -37,20 +78,39 @@ class KronosAdapter:
         self._predictor: Any | None = None
 
     def is_ready(self) -> bool:
-        repo = Path(self.config.external_repo_path)
+        repo = resolve_kronos_root() if not self.config.external_repo_path.is_absolute() else self.config.external_repo_path
         return repo.exists() and any(repo.iterdir())
 
     def load(self) -> None:
-        """Load tokenizer/model/predictor.
-
-        Actual implementation belongs to V0.2 after Kronos dependencies are installed.
-        """
+        """Load tokenizer/model/predictor from the external Kronos checkout."""
         if not self.is_ready():
             raise RuntimeError(
                 "Kronos repo is not installed. Finish V0.1 first, then clone "
                 "https://github.com/shiyu-coder/Kronos into external/Kronos in V0.2."
             )
-        raise NotImplementedError("V0.2: implement Kronos tokenizer/model loading here.")
+        kronos_root = (
+            self.config.external_repo_path
+            if self.config.external_repo_path.is_absolute()
+            else resolve_kronos_root()
+        )
+        ensure_kronos_import_path(kronos_root)
+        from model import Kronos, KronosPredictor, KronosTokenizer  # type: ignore  # noqa: E402
+
+        cache_dir = Path(self.config.hf_cache_dir)
+        if not cache_dir.is_absolute():
+            cache_dir = Path(__file__).resolve().parents[2] / cache_dir
+        cache_dir.mkdir(parents=True, exist_ok=True)
+
+        tokenizer = KronosTokenizer.from_pretrained(self.config.tokenizer_name, cache_dir=cache_dir)
+        model = Kronos.from_pretrained(self.config.predictor_name, cache_dir=cache_dir)
+        tokenizer.eval()
+        model.eval()
+        self._predictor = KronosPredictor(
+            model,
+            tokenizer,
+            device=self.config.device,
+            max_context=self.config.max_context,
+        )
 
     def prepare_input(self, daily_k: pd.DataFrame) -> tuple[pd.DataFrame, pd.Series]:
         require_columns(daily_k, ETF_DAILY_K_REQUIRED, "ETF daily K")

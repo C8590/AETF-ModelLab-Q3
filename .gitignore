@@ -25,7 +25,7 @@ logs/*
 *.log
 
 # Models and checkpoints
-models/kronos/*
+models/kronos/
 !models/kronos/README.md
 *.pt
 *.pth
@@ -34,10 +34,9 @@ models/kronos/*
 *.onnx
 *.bin
 
-# External repos; keep directory placeholder only
-external/Kronos/*
-!external/Kronos/README.md
-!external/Kronos/.gitkeep
+# External repos
+external/Kronos/.git/
+external/Kronos/
 
 # Data / cache
 data/cache/*
@@ -47,12 +46,14 @@ data/input/*
 data/samples/*.csv
 !data/samples/.gitkeep
 
-# Large outputs; keep placeholders and markdown reports
+# Large outputs; keep placeholders, markdown reports, and reviewed V0.2 CSV
 outputs/*.csv
 outputs/*.parquet
 outputs/*.pkl
 outputs/*.feather
 outputs/*.jsonl
+outputs/*.png
+!outputs/kronos_v02_sample_prediction.csv
 !outputs/.gitkeep
 !outputs/README.md
 
