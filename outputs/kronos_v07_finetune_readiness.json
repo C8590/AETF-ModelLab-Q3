@@ -1,0 +1,49 @@
+{
+  "mode": "finetune_evaluation_only",
+  "is_ready_for_full_finetune": false,
+  "is_ready_for_tokenizer_finetune": false,
+  "is_ready_for_predictor_dry_run": true,
+  "decision": "NOT_READY_FOR_FULL_FINETUNE",
+  "reasons": [
+    "real symbol count 2 is below threshold 20.",
+    "replay case count 4 is below threshold 200.",
+    "direction accuracy is below the experiment threshold 0.52.",
+    "mean absolute return error is above the experiment threshold 0.03.",
+    "8GB GPU memory is not recommended for full fine-tuning.",
+    "full fine-tuning is disabled by hardware policy."
+  ],
+  "warnings": [
+    "Current input is synthetic/demo data and cannot be treated as a real ETF training set.",
+    "V0.7 is evaluation only; it does not execute model training.",
+    "tokenizer fine-tuning requires substantial real long-horizon ETF data."
+  ],
+  "observed": {
+    "symbol_count": 2,
+    "replay_case_count": 4,
+    "direction_accuracy": 0.0,
+    "mean_abs_return_error": 0.0616469458914649,
+    "max_symbol_case_count": 2,
+    "min_symbol_case_count": 2,
+    "gpu_memory_gb": 8,
+    "data_kind": "synthetic_demo"
+  },
+  "thresholds": {
+    "min_real_symbols": 20,
+    "min_real_bars_per_symbol": 1000,
+    "min_replay_cases": 200,
+    "min_direction_accuracy_for_experiment": 0.52,
+    "max_mean_abs_return_error_for_experiment": 0.03,
+    "min_train_months": 24,
+    "min_validation_months": 6,
+    "min_test_months": 6
+  },
+  "recommended_next_step": "Proceed only to V0.8 predictor-only dry-run design with tiny local settings.",
+  "safety": {
+    "training_executed": false,
+    "torchrun_executed": false,
+    "model_download_executed": false,
+    "execution_allowed": false,
+    "writeback_to_left_project_allowed": false,
+    "is_market_advice": false
+  }
+}

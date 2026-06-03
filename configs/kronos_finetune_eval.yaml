@@ -1,0 +1,40 @@
+mode: "finetune_evaluation_only"
+
+inputs:
+  replay_predictions_path: "outputs/kronos_v05_replay_predictions.csv"
+  replay_metrics_path: "outputs/kronos_v05_replay_metrics.csv"
+  shadow_display_json_path: "outputs/kronos_v06_shadow_display.json"
+  sample_replay_cases_path: "data/samples/replay/v05_left_candidates_history.csv"
+
+outputs:
+  readiness_json_path: "outputs/kronos_v07_finetune_readiness.json"
+  dataset_profile_csv_path: "outputs/kronos_v07_dataset_profile.csv"
+  report_path: "docs/kronos_v07_finetune_evaluation_report.md"
+  readiness_doc_path: "docs/kronos_finetune_readiness.md"
+
+thresholds:
+  min_real_symbols: 20
+  min_real_bars_per_symbol: 1000
+  min_replay_cases: 200
+  min_direction_accuracy_for_experiment: 0.52
+  max_mean_abs_return_error_for_experiment: 0.03
+  min_train_months: 24
+  min_validation_months: 6
+  min_test_months: 6
+
+hardware:
+  gpu_name: "NVIDIA GeForce RTX 4060 Ti"
+  gpu_memory_gb: 8
+  allow_full_finetune: false
+  allow_tokenizer_finetune: false
+  allow_predictor_dry_run: true
+  recommended_batch_size: 1
+  recommended_gradient_accumulation: true
+  recommended_mixed_precision: true
+
+safety:
+  allow_trading_advice: false
+  allow_order_execution: false
+  allow_writeback_to_left_project: false
+  allow_submit_checkpoints: false
+  allow_download_kronos_large: false
