@@ -1,16 +1,107 @@
 {
   "mode": "real_etf_data_preparation",
-  "generated_at": "2026-06-03T20:41:38",
+  "generated_at": "2026-06-03T21:24:00",
   "raw_kline_dir": "E:/AETF-ModelLab/data/real/raw/kline",
   "raw_candidates_dir": "E:/AETF-ModelLab/data/real/raw/candidates",
-  "raw_kline_file_count": 0,
+  "raw_kline_file_count": 15,
   "normalized_kline_dir": "E:/AETF-ModelLab/data/real/normalized/kline",
   "dataset_profile_path": "E:/AETF-ModelLab/outputs/real_data/kronos_v10_real_dataset_profile.csv",
   "expanded_replay_cases_path": "E:/AETF-ModelLab/data/real/replay/kronos_v10_expanded_replay_cases.csv",
   "readiness_json_path": "E:/AETF-ModelLab/outputs/real_data/kronos_v10_replay_readiness.json",
   "candidate_history_present": false,
   "candidate_template_path": "E:/AETF-ModelLab/data/real/raw/candidates/left_candidates_history_TEMPLATE.csv",
-  "kline_files": [],
+  "kline_files": [
+    {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/159915.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/159915.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/159949.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/159949.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/510050.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/510050.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/510300.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/510300.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/510500.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/510500.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/512100.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/512100.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/512480.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/512480.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/512660.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/512660.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/512690.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/512690.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/512760.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/512760.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/512800.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/512800.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/512880.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/512880.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/515030.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/515030.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/588000.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/588000.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/588080.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/588080.csv",
+      "status": "PASS",
+      "errors": ""
+    }
+  ],
   "no_training": true,
   "no_torchrun": true,
   "no_gpu_inference": true,
