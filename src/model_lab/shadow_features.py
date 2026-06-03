@@ -7,6 +7,8 @@ import pandas as pd
 
 from .validation import KRONOS_FORECAST_REQUIRED
 
+FORBIDDEN_OBSERVATION_TERMS = ("buy", "sell", "order", "trade")
+
 
 def _nth_value(values: pd.Series, n: int) -> float:
     if len(values) >= n:
@@ -20,6 +22,99 @@ def _safe_div(a: float, b: float) -> float:
     if b == 0 or np.isnan(a) or np.isnan(b):
         return float("nan")
     return float(a / b)
+
+
+def _value_at(values: pd.Series, position: int) -> float:
+    if values.empty:
+        return float("nan")
+    index = min(position, len(values)) - 1
+    return float(values.iloc[index])
+
+
+def summarize_prediction_path(prediction_path: pd.DataFrame, *, last_close: float) -> dict[str, float | int]:
+    if last_close <= 0:
+        raise ValueError("last_close must be positive.")
+    if prediction_path.empty:
+        raise ValueError("prediction_path must not be empty.")
+    if "close" not in prediction_path.columns:
+        raise ValueError("prediction_path missing columns: ['close']")
+
+    closes = pd.to_numeric(prediction_path["close"], errors="coerce").dropna().reset_index(drop=True)
+    if closes.empty:
+        raise ValueError("prediction_path close values are empty after numeric conversion.")
+
+    lows = (
+        pd.to_numeric(prediction_path["low"], errors="coerce").dropna().reset_index(drop=True)
+        if "low" in prediction_path.columns
+        else closes
+    )
+    highs = (
+        pd.to_numeric(prediction_path["high"], errors="coerce").dropna().reset_index(drop=True)
+        if "high" in prediction_path.columns
+        else closes
+    )
+    returns = closes / float(last_close) - 1.0
+
+    return {
+        "path_len": int(len(closes)),
+        "last_close": float(last_close),
+        "pred_close_1": _value_at(closes, 1),
+        "pred_close_3": _value_at(closes, 3),
+        "pred_close_5": _value_at(closes, 5),
+        "pred_close_last": float(closes.iloc[-1]),
+        "pred_close_mean": float(closes.mean()),
+        "pred_return_1": _value_at(returns, 1),
+        "pred_return_3": _value_at(returns, 3),
+        "pred_return_5": _value_at(returns, 5),
+        "pred_return_last": float(returns.iloc[-1]),
+        "pred_return_min": float(returns.min()),
+        "pred_return_max": float(returns.max()),
+        "pred_low_min": float(lows.min()),
+        "pred_high_max": float(highs.max()),
+        "pred_drawdown_min": float(lows.min() / float(last_close) - 1.0),
+        "pred_upside_max": float(highs.max() / float(last_close) - 1.0),
+        "pred_path_std": float(closes.std(ddof=0)) if len(closes) > 1 else 0.0,
+    }
+
+
+def build_shadow_observation_row(
+    candidate: pd.Series | dict[str, Any],
+    *,
+    summary: dict[str, Any] | None = None,
+    model_status: str,
+    error_message: str = "",
+    metadata: dict[str, Any] | None = None,
+) -> dict[str, Any]:
+    candidate_data = dict(candidate)
+    metadata = metadata or {}
+    row: dict[str, Any] = {
+        "as_of_date": candidate_data.get("trade_date"),
+        "candidate_rank": candidate_data.get("candidate_rank"),
+        "code": candidate_data.get("code"),
+        "name": candidate_data.get("name"),
+        "last_close": candidate_data.get("close"),
+        "risk_level": candidate_data.get("risk_level", pd.NA),
+        "model_status": model_status,
+        "error_message": error_message,
+        "model_name": metadata.get("model_name", pd.NA),
+        "tokenizer_name": metadata.get("tokenizer_name", pd.NA),
+        "device": metadata.get("device", pd.NA),
+        "lookback": metadata.get("lookback", pd.NA),
+        "pred_len": metadata.get("pred_len", pd.NA),
+        "sample_count": metadata.get("sample_count", pd.NA),
+        "run_time": metadata.get("finished_at") or metadata.get("run_time", pd.NA),
+    }
+    if summary:
+        row.update(summary)
+
+    forbidden = [
+        key
+        for key in row
+        if any(term in key.lower() for term in FORBIDDEN_OBSERVATION_TERMS)
+    ]
+    if forbidden:
+        raise ValueError(f"shadow observation row contains forbidden fields: {forbidden}")
+    return row
 
 
 def decide_action(row: pd.Series) -> tuple[str, str, float]:

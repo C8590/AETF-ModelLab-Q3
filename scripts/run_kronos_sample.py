@@ -19,7 +19,10 @@ if str(SRC_ROOT) not in sys.path:
 
 import numpy as np
 import pandas as pd
-import torch
+try:
+    import torch
+except Exception:
+    torch = None
 
 from model_lab.kronos_adapter import (
     KronosAdapter,
@@ -47,6 +50,8 @@ SYNTHETIC_SAMPLE_PATH = PROJECT_ROOT / "data" / "samples" / "kronos_v02_syntheti
 def set_seed(seed: int = 123) -> None:
     random.seed(seed)
     np.random.seed(seed)
+    if torch is None:
+        return
     torch.manual_seed(seed)
     if torch.cuda.is_available():
         torch.cuda.manual_seed_all(seed)
@@ -88,6 +93,8 @@ def load_sample() -> tuple[pd.DataFrame, Path, str]:
 
 
 def gpu_memory() -> dict[str, Any]:
+    if torch is None:
+        return {"available": False}
     if not torch.cuda.is_available():
         return {"available": False}
     device = torch.device(DEVICE)
@@ -108,9 +115,9 @@ def report_lines(state: dict[str, Any]) -> list[str]:
         f"- 生成时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}",
         f"- 运行时间: {metadata.get('elapsed_seconds', 'N/A')}s",
         f"- Python 版本: {platform.python_version()}",
-        f"- torch 版本: {torch.__version__}",
-        f"- CUDA 版本: {torch.version.cuda}",
-        f"- GPU 名称: {torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'N/A'}",
+        f"- torch 版本: {torch.__version__ if torch is not None else 'unavailable'}",
+        f"- CUDA 版本: {torch.version.cuda if torch is not None else 'unavailable'}",
+        f"- GPU 名称: {torch.cuda.get_device_name(0) if torch is not None and torch.cuda.is_available() else 'N/A'}",
         f"- 模型名称: {metadata.get('model_name', MODEL_NAME)}",
         f"- tokenizer 名称: {metadata.get('tokenizer_name', TOKENIZER_NAME)}",
         f"- lookback: {metadata.get('lookback', LOOKBACK)}",
@@ -145,6 +152,8 @@ def main() -> int:
     OUTPUT_CSV.parent.mkdir(parents=True, exist_ok=True)
     try:
         set_seed()
+        if torch is None:
+            raise RuntimeError("torch is not installed; V0.2 sample requires PyTorch with CUDA.")
         if not torch.cuda.is_available():
             raise RuntimeError("CUDA is not available; V0.2 sample requires cuda:0.")
         state["gpu_memory_before"] = gpu_memory()

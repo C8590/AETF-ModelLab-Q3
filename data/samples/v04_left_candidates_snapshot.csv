@@ -1,0 +1,3 @@
+"candidate_rank","trade_date","code","name","close","risk_level","kline_csv_path"
+"1","2026-06-03","510300","沪深300ETF","4.215","R1","data/samples/kline/v04_510300_sample.csv"
+"2","2026-06-03","159915","创业板ETF","2.136","R2","data/samples/kline/v04_159915_sample.csv"

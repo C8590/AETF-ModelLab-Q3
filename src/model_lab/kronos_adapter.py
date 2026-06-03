@@ -3,6 +3,7 @@ from __future__ import annotations
 import os
 import sys
 import time
+from contextlib import nullcontext
 from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
@@ -294,9 +295,13 @@ class KronosAdapter:
         if self._predictor is None:
             raise RuntimeError("Kronos predictor did not load.")
 
-        import torch
+        try:
+            import torch
+            no_grad_context = torch.no_grad()
+        except Exception:
+            no_grad_context = nullcontext()
 
-        with torch.no_grad():
+        with no_grad_context:
             pred_df = self._predictor.predict(
                 df=prepared.x_df,
                 x_timestamp=prepared.x_timestamp,
@@ -324,6 +329,9 @@ class KronosAdapter:
             "max_context": self.config.max_context,
             "lookback": prepared.lookback,
             "pred_len": prepared.pred_len,
+            "sample_count": sample_count if sample_count is not None else self.config.default_sample_count,
+            "T": T if T is not None else self.config.default_T,
+            "top_p": top_p if top_p is not None else self.config.default_top_p,
             "input_columns": prepared.input_columns,
             "output_columns": pred_df.columns.tolist(),
             "filled_optional_columns": prepared.filled_optional_columns,

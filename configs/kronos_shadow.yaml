@@ -1,33 +1,25 @@
-model:
-  repo_url: "https://github.com/shiyu-coder/Kronos"
-  default_model_name: "Kronos-small"
+candidate_snapshot_path: "data/samples/v04_left_candidates_snapshot.csv"
+output_csv_path: "outputs/kronos_v04_shadow_predictions.csv"
+report_path: "docs/kronos_v04_shadow_report.md"
+
+adapter:
+  model_name: "NeoQuasar/Kronos-small"
   tokenizer_name: "NeoQuasar/Kronos-Tokenizer-base"
-  predictor_name: "NeoQuasar/Kronos-small"
+  device: "cuda:0"
   max_context: 512
+  hf_cache_dir: "models/kronos/hf_cache"
 
 inference:
-  lookback: 240
-  pred_len: 10
-  sample_count: 3
-  temperature: 1.0
+  lookback: 120
+  pred_len: 24
+  sample_count: 1
+  T: 1.0
   top_p: 0.9
-  device: "cuda"
-  batch_size_4060ti_8gb: 16
-  batch_size_4060ti_16gb: 64
-  cpu_fallback: true
+  max_candidates: 2
 
-shadow_rules:
-  max_drawdown_5d_warn: -0.03
-  expected_upside_support: 0.015
-  rr_support: 1.5
-  rr_wait: 1.0
-  risk_block_levels: ["R4", "P0"]
-  risk_no_upgrade_levels: ["R2", "R3"]
-
-actions:
-  support_probe: "SUPPORT_PROBE"
-  wait: "WAIT"
-  risk_of_breakdown: "RISK_OF_BREAKDOWN"
-  conflict: "CONFLICT"
-  no_signal: "NO_SIGNAL"
-  error: "ERROR"
+safety:
+  mode: "shadow_only"
+  allow_trading_signal: false
+  allow_order_execution: false
+  allow_writeback_to_left_project: false
+  allow_finetune: false
