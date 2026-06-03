@@ -1,0 +1,17 @@
+mode=predictor_only_1step_smoke
+gate_status=PASS
+smoke_status=PASS
+predictor_only=True
+tokenizer_finetune=False
+full_finetune=False
+max_steps=1
+batch_size=1
+nproc_per_node=1
+loss_before=2.325525999069214
+loss_after=2.2955832481384277
+optimizer_step_executed=True
+max_memory_allocated_mb=503.51
+checkpoint_files_created=0
+checkpoint_root=E:\AETF-ModelLab\outputs\ignored_checkpoints\kronos_v09_predictor_smoke
+no_formal_training=true
+pytest_status=PASS

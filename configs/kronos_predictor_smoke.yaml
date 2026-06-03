@@ -1,0 +1,50 @@
+mode: "predictor_only_1step_smoke"
+
+inputs:
+  readiness_json_path: "outputs/kronos_v07_finetune_readiness.json"
+  dryrun_manifest_path: "outputs/kronos_v08_predictor_dryrun_manifest.json"
+  dryrun_plan_path: "outputs/kronos_v08_predictor_dryrun_plan.json"
+  replay_cases_path: "data/samples/replay/v05_left_candidates_history.csv"
+  replay_metrics_path: "outputs/kronos_v05_replay_metrics.csv"
+  dataset_profile_csv_path: "outputs/kronos_v07_dataset_profile.csv"
+
+outputs:
+  smoke_result_path: "outputs/kronos_v09_predictor_smoke_result.json"
+  smoke_log_path: "outputs/kronos_v09_predictor_smoke_log.txt"
+  report_path: "docs/kronos_v09_predictor_smoke_report.md"
+  design_doc_path: "docs/kronos_predictor_smoke_design.md"
+  ignored_checkpoint_root: "outputs/ignored_checkpoints/kronos_v09_predictor_smoke"
+
+model:
+  pretrained_predictor: "NeoQuasar/Kronos-small"
+  pretrained_tokenizer: "NeoQuasar/Kronos-Tokenizer-base"
+  max_context: 512
+  device: "cuda:0"
+
+smoke:
+  predictor_only: true
+  tokenizer_finetune: false
+  full_finetune: false
+  execute_smoke_training: true
+  require_explicit_execute_flag: true
+  allow_torchrun_execution: true
+  nproc_per_node: 1
+  max_steps: 1
+  epochs: 1
+  batch_size: 1
+  gradient_accumulation_steps: 1
+  mixed_precision: true
+  save_checkpoint: false
+  allow_checkpoint_files_in_ignored_dir: true
+  synthetic_demo_only: true
+  timeout_seconds: 300
+
+safety:
+  allow_trading_advice: false
+  allow_order_execution: false
+  allow_writeback_to_left_project: false
+  allow_submit_checkpoints: false
+  allow_download_kronos_large: false
+  allow_tokenizer_finetune: false
+  allow_full_finetune: false
+  allow_long_training: false
