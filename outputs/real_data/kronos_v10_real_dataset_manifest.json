@@ -1,6 +1,6 @@
 {
   "mode": "real_etf_data_preparation",
-  "generated_at": "2026-06-03T20:09:58",
+  "generated_at": "2026-06-03T20:41:38",
   "raw_kline_dir": "E:/AETF-ModelLab/data/real/raw/kline",
   "raw_candidates_dir": "E:/AETF-ModelLab/data/real/raw/candidates",
   "raw_kline_file_count": 0,
