@@ -1,0 +1,50 @@
+mode: "predictor_dryrun_design_only"
+
+inputs:
+  readiness_json_path: "outputs/kronos_v07_finetune_readiness.json"
+  replay_cases_path: "data/samples/replay/v05_left_candidates_history.csv"
+  replay_metrics_path: "outputs/kronos_v05_replay_metrics.csv"
+  dataset_profile_csv_path: "outputs/kronos_v07_dataset_profile.csv"
+
+outputs:
+  dryrun_manifest_path: "outputs/kronos_v08_predictor_dryrun_manifest.json"
+  dryrun_plan_path: "outputs/kronos_v08_predictor_dryrun_plan.json"
+  report_path: "docs/kronos_v08_predictor_dryrun_report.md"
+  design_doc_path: "docs/kronos_predictor_dryrun_design.md"
+  ignored_checkpoint_root: "outputs/ignored_checkpoints/kronos_v08_predictor_dryrun"
+
+model:
+  pretrained_predictor: "NeoQuasar/Kronos-small"
+  pretrained_tokenizer: "NeoQuasar/Kronos-Tokenizer-base"
+  max_context: 512
+  device: "cuda:0"
+
+dryrun:
+  predictor_only: true
+  tokenizer_finetune: false
+  full_finetune: false
+  execute_training: false
+  allow_torchrun_execution: false
+  nproc_per_node: 1
+  max_steps: 1
+  epochs: 1
+  batch_size: 1
+  gradient_accumulation_steps: 1
+  mixed_precision: true
+  save_checkpoint: false
+  synthetic_demo_only: true
+
+thresholds:
+  require_predictor_dry_run_ready: true
+  min_required_replay_cases_for_real_training: 200
+  min_required_symbols_for_real_training: 20
+  max_allowed_gpu_memory_gb: 8
+
+safety:
+  allow_trading_advice: false
+  allow_order_execution: false
+  allow_writeback_to_left_project: false
+  allow_submit_checkpoints: false
+  allow_download_kronos_large: false
+  allow_tokenizer_finetune: false
+  allow_full_finetune: false

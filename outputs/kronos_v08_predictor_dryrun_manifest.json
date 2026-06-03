@@ -1,0 +1,16 @@
+{
+  "mode": "predictor_dryrun_design_only",
+  "created_at": "2026-06-03T17:12:32",
+  "readiness_decision": "NOT_READY_FOR_FULL_FINETUNE",
+  "replay_case_count": 4,
+  "symbol_count": 2,
+  "direction_accuracy": 0.0,
+  "mean_abs_return_error": 0.0616469458914649,
+  "synthetic_demo_only": true,
+  "predictor_only": true,
+  "checkpoint_root": "E:/AETF-ModelLab/outputs/ignored_checkpoints/kronos_v08_predictor_dryrun",
+  "checkpoint_root_ignored_expected": true,
+  "no_formal_training": true,
+  "no_tokenizer_finetune": true,
+  "no_full_finetune": true
+}

@@ -1,0 +1,20 @@
+{
+  "executable": "torchrun",
+  "command_preview": "torchrun --standalone --nproc_per_node=1 E:/AETF-ModelLab/external/Kronos/finetune/train_predictor.py # dry-run preview only: max_steps=1, batch_size=1, checkpoint_root=E:/AETF-ModelLab/outputs/ignored_checkpoints/kronos_v08_predictor_dryrun",
+  "execute_training": false,
+  "allow_torchrun_execution": false,
+  "nproc_per_node": 1,
+  "max_steps": 1,
+  "batch_size": 1,
+  "warnings": [
+    "Preview only; V0.8 must not execute torchrun.",
+    "Official predictor training saves checkpoints, so output must remain under an ignored root.",
+    "Synthetic/demo inputs are insufficient for formal model training."
+  ],
+  "blocked_commands": [
+    "tokenizer training via finetune/train_tokenizer.py or finetune_csv/finetune_tokenizer.py",
+    "full finetune or sequential tokenizer plus predictor training",
+    "Kronos-large download or substitution",
+    "long torchrun execution beyond a future approved one-step smoke run"
+  ]
+}

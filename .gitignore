@@ -27,6 +27,11 @@ logs/*
 # Models and checkpoints
 models/kronos/
 !models/kronos/README.md
+outputs/ignored_checkpoints/
+checkpoints/
+runs/
+wandb/
+comet/
 *.pt
 *.pth
 *.ckpt
