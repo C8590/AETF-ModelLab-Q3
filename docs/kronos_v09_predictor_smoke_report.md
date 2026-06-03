@@ -1,6 +1,6 @@
 # Kronos V0.9 Predictor Smoke Report
 
-- 运行时间: 2026-06-03 17:31:31
+- 运行时间: 2026-06-03 19:49:31
 - readiness JSON 路径: outputs/kronos_v07_finetune_readiness.json
 - dryrun manifest 路径: outputs/kronos_v08_predictor_dryrun_manifest.json
 - ignored checkpoint root: outputs/ignored_checkpoints/kronos_v09_predictor_smoke
@@ -23,7 +23,7 @@
 - 是否未执行正式训练: 是
 - 是否未运行长时间 torchrun: 是
 - 是否未提交 checkpoint: 是
-- pytest 结果: PASS (70 passed in 2.22s)
+- pytest 结果: PASS (70 passed in 2.37s)
 - 是否可以进入 V0.10 真实 ETF 长周期数据准备与回放扩容: 是
 
 ## Official Entry Inspection

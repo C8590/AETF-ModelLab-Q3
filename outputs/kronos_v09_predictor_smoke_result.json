@@ -65,9 +65,9 @@
   },
   "smoke_result": {
     "status": "PASS",
-    "started_at": "2026-06-03T17:31:24",
-    "finished_at": "2026-06-03T17:31:28",
-    "elapsed_seconds": 4.1,
+    "started_at": "2026-06-03T19:49:24",
+    "finished_at": "2026-06-03T19:49:28",
+    "elapsed_seconds": 4.29,
     "torch_version": "2.12.0+cu126",
     "cuda_available": true,
     "gpu_name": "NVIDIA GeForce RTX 4060 Ti",
@@ -80,7 +80,7 @@
     "error_message": ""
   },
   "pytest_status": "PASS",
-  "pytest_summary": "70 passed in 2.22s",
+  "pytest_summary": "70 passed in 2.37s",
   "no_formal_training": true,
   "no_long_torchrun": true,
   "no_tokenizer_finetune": true,
