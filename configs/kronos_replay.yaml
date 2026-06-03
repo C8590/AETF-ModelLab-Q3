@@ -1,0 +1,27 @@
+replay_cases_path: "data/samples/replay/v05_left_candidates_history.csv"
+output_predictions_path: "outputs/kronos_v05_replay_predictions.csv"
+output_metrics_path: "outputs/kronos_v05_replay_metrics.csv"
+report_path: "docs/kronos_v05_replay_report.md"
+
+adapter:
+  model_name: "NeoQuasar/Kronos-small"
+  tokenizer_name: "NeoQuasar/Kronos-Tokenizer-base"
+  device: "cuda:0"
+  max_context: 512
+  hf_cache_dir: "models/kronos/hf_cache"
+
+inference:
+  lookback: 120
+  pred_len: 24
+  sample_count: 1
+  T: 1.0
+  top_p: 0.9
+  max_cases: 4
+
+safety:
+  mode: "historical_replay_only"
+  allow_trading_signal: false
+  allow_order_execution: false
+  allow_writeback_to_left_project: false
+  allow_finetune: false
+  prevent_lookahead_bias: true

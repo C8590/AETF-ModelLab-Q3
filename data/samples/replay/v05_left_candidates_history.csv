@@ -1,0 +1,5 @@
+"replay_id","as_of_date","symbol","display_name","candidate_rank","left_score","kline_path","notes"
+"2025-07-03_510300","2025-07-03","510300","沪深300ETF","1","82.5","data/samples/replay/kline/v05_510300_history.csv","synthetic demo replay sample"
+"2025-08-14_159915","2025-08-14","159915","创业板ETF","2","76","data/samples/replay/kline/v05_159915_history.csv","synthetic demo replay sample"
+"2025-09-11_510300","2025-09-11","510300","沪深300ETF","1","84","data/samples/replay/kline/v05_510300_history.csv","synthetic demo replay sample"
+"2025-10-09_159915","2025-10-09","159915","创业板ETF","1","79.5","data/samples/replay/kline/v05_159915_history.csv","synthetic demo replay sample"
