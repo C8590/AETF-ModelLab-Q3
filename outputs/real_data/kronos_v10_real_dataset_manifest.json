@@ -1,0 +1,18 @@
+{
+  "mode": "real_etf_data_preparation",
+  "generated_at": "2026-06-03T20:09:58",
+  "raw_kline_dir": "E:/AETF-ModelLab/data/real/raw/kline",
+  "raw_candidates_dir": "E:/AETF-ModelLab/data/real/raw/candidates",
+  "raw_kline_file_count": 0,
+  "normalized_kline_dir": "E:/AETF-ModelLab/data/real/normalized/kline",
+  "dataset_profile_path": "E:/AETF-ModelLab/outputs/real_data/kronos_v10_real_dataset_profile.csv",
+  "expanded_replay_cases_path": "E:/AETF-ModelLab/data/real/replay/kronos_v10_expanded_replay_cases.csv",
+  "readiness_json_path": "E:/AETF-ModelLab/outputs/real_data/kronos_v10_replay_readiness.json",
+  "candidate_history_present": false,
+  "candidate_template_path": "E:/AETF-ModelLab/data/real/raw/candidates/left_candidates_history_TEMPLATE.csv",
+  "kline_files": [],
+  "no_training": true,
+  "no_torchrun": true,
+  "no_gpu_inference": true,
+  "no_left_project_connection": true
+}

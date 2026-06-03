@@ -1,0 +1,19 @@
+{
+  "mode": "real_etf_data_preparation",
+  "data_status": "KLINE_DATA_MISSING",
+  "symbol_count": 0,
+  "qualified_symbol_count": 0,
+  "candidate_date_count": 0,
+  "replay_case_count": 0,
+  "min_bars_per_symbol": 1000,
+  "max_missing_rate_observed": null,
+  "is_ready_for_expanded_replay": false,
+  "reasons": [
+    "No real ETF kline CSV files were found.",
+    "Real candidate history CSV is missing.",
+    "qualified_symbol_count 0 is below min_symbols 20.",
+    "replay_case_count 0 is below min_replay_cases 200."
+  ],
+  "warnings": [],
+  "next_step": "Import sufficient real ETF kline CSVs and real candidate history CSV, then rerun V0.10."
+}

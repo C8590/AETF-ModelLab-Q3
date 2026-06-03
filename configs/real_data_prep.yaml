@@ -1,0 +1,37 @@
+mode: "real_etf_data_preparation"
+
+inputs:
+  raw_kline_dir: "data/real/raw/kline"
+  raw_candidates_dir: "data/real/raw/candidates"
+  candidate_history_path: "data/real/raw/candidates/left_candidates_history.csv"
+
+outputs:
+  normalized_kline_dir: "data/real/normalized/kline"
+  normalized_candidate_history_path: "data/real/normalized/left_candidates_history.csv"
+  dataset_manifest_path: "outputs/real_data/kronos_v10_real_dataset_manifest.json"
+  dataset_profile_path: "outputs/real_data/kronos_v10_real_dataset_profile.csv"
+  data_quality_report_path: "docs/kronos_v10_real_data_quality_report.md"
+  expanded_replay_cases_path: "data/real/replay/kronos_v10_expanded_replay_cases.csv"
+  replay_readiness_path: "outputs/real_data/kronos_v10_replay_readiness.json"
+
+thresholds:
+  min_symbols: 20
+  min_bars_per_symbol: 1000
+  min_replay_cases: 200
+  min_history_days: 1000
+  min_candidate_dates: 100
+  max_missing_rate: 0.01
+  max_duplicate_timestamp_count: 0
+
+replay:
+  lookback: 120
+  pred_len: 24
+  max_cases: 500
+  require_no_lookahead_bias: true
+
+safety:
+  allow_training: false
+  allow_torchrun: false
+  allow_trading_advice: false
+  allow_order_execution: false
+  allow_writeback_to_left_project: false
