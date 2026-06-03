@@ -1,0 +1,19 @@
+shadow_predictions_path: "outputs/kronos_v04_shadow_predictions.csv"
+replay_predictions_path: "outputs/kronos_v05_replay_predictions.csv"
+replay_metrics_path: "outputs/kronos_v05_replay_metrics.csv"
+output_json_path: "outputs/kronos_v06_shadow_display.json"
+output_html_path: "outputs/kronos_v06_shadow_dashboard.html"
+report_path: "docs/kronos_v06_display_report.md"
+
+display:
+  schema_version: "v0.6"
+  flat_threshold: 0.001
+  small_sample_threshold: 30
+  title: "AETF ModelLab - Kronos Shadow Display V0.6"
+
+safety:
+  mode: "shadow_display_only"
+  allow_trading_advice: false
+  allow_order_execution: false
+  allow_writeback_to_left_project: false
+  allow_finetune: false

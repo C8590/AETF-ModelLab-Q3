@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AETF ModelLab - Kronos Shadow Display V0.6</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1b1f23;
+      --muted: #5f6b7a;
+      --line: #d8dee6;
+      --paper: #ffffff;
+      --band: #f5f7fa;
+      --accent: #0f766e;
+      --warn: #8a4b00;
+      --warn-bg: #fff7e6;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font: 14px/1.55 "Segoe UI", Arial, sans-serif;
+    }
+    header {
+      padding: 24px 32px 18px;
+      border-bottom: 1px solid var(--line);
+      background: var(--band);
+    }
+    h1 { margin: 0 0 8px; font-size: 24px; font-weight: 700; }
+    h2 { margin: 28px 0 12px; font-size: 17px; }
+    main { padding: 0 32px 32px; }
+    .muted { color: var(--muted); }
+    .banner {
+      margin-top: 16px;
+      padding: 12px 14px;
+      border: 1px solid #f0cf87;
+      background: var(--warn-bg);
+      color: var(--warn);
+      border-radius: 6px;
+      font-weight: 600;
+    }
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .metric {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 12px;
+      background: #fff;
+    }
+    .metric strong { display: block; font-size: 18px; margin-top: 4px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid var(--line);
+      background: #fff;
+    }
+    th, td {
+      padding: 9px 10px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+      overflow-wrap: anywhere;
+    }
+    th { background: var(--band); font-weight: 700; }
+    tbody tr:last-child td { border-bottom: 0; }
+    .note { max-width: 900px; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AETF ModelLab - Kronos Shadow Display V0.6</h1>
+    <div class="muted">Generated at 2026-06-03T16:00:37 · mode: shadow_display_only</div>
+    <div class="banner">只读 AI 影子观察 · 非交易建议 · 不下单 · 不回写主项目 · 当前 synthetic/demo 样本不代表真实市场预测能力</div>
+  </header>
+  <main>
+    <section>
+      <h2>Replay Metrics</h2>
+      <div class="summary-grid">
+        <div class="metric">case_count<strong>4</strong></div>
+        <div class="metric">success_count<strong>4</strong></div>
+        <div class="metric">fail_count<strong>0</strong></div>
+        <div class="metric">direction_accuracy<strong>0</strong></div>
+        <div class="metric">mean_abs_return_error<strong>0.0616469</strong></div>
+        <div class="metric">rmse_return_error<strong>0.0651482</strong></div>
+      </div>
+      <p class="note">样本过小，仅验证工程链路，不代表真实市场预测能力。</p>
+    </section>
+    <section>
+      <h2>Shadow Cards</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Symbol</th><th>Display Name</th><th>As Of</th><th>Rank</th><th>Left Score</th>
+            <th>Model Status</th><th>Direction Label</th><th>Pred Return Last</th>
+            <th>Pred Range</th><th>Pred Volatility</th><th>Observation Level</th><th>Notes</th>
+          </tr>
+        </thead>
+        <tbody><tr><td>510300</td><td>沪深300ETF</td><td>2026-06-03</td><td>1</td><td>-</td><td>PASS</td><td>DOWN</td><td>-4.33%</td><td>4.22%</td><td>0.0636374</td><td>HIGH_VOLATILITY</td><td></td></tr>
+<tr><td>159915</td><td>创业板ETF</td><td>2026-06-03</td><td>2</td><td>-</td><td>PASS</td><td>DOWN</td><td>-6.63%</td><td>3.52%</td><td>0.0276338</td><td>NORMAL</td><td></td></tr></tbody>
+      </table>
+    </section>
+    <section>
+      <h2>Data Sources</h2>
+      <table>
+        <thead><tr><th>Source</th><th>Path</th></tr></thead>
+        <tbody><tr><td>shadow_predictions</td><td>outputs/kronos_v04_shadow_predictions.csv</td></tr>
+<tr><td>replay_predictions</td><td>outputs/kronos_v05_replay_predictions.csv</td></tr>
+<tr><td>replay_metrics</td><td>outputs/kronos_v05_replay_metrics.csv</td></tr></tbody>
+      </table>
+    </section>
+    <section>
+      <h2>Safety</h2>
+      <p class="note">AI shadow observations only. Not trading advice. This static page is read-only and does not connect to the left-side project.</p>
+    </section>
+  </main>
+</body>
+</html>

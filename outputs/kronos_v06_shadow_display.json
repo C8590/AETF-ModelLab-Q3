@@ -1,0 +1,62 @@
+{
+  "schema_version": "v0.6",
+  "generated_at": "2026-06-03T16:00:37",
+  "safety": {
+    "mode": "shadow_display_only",
+    "is_trading_advice": false,
+    "execution_allowed": false,
+    "writeback_to_left_project_allowed": false,
+    "disclaimer": "AI shadow observations only. Not trading advice."
+  },
+  "summary": {
+    "card_count": 2,
+    "pass_count": 2,
+    "fail_count": 0,
+    "mode": "shadow_display_only",
+    "data_sources": {
+      "shadow_predictions": "outputs/kronos_v04_shadow_predictions.csv",
+      "replay_predictions": "outputs/kronos_v05_replay_predictions.csv",
+      "replay_metrics": "outputs/kronos_v05_replay_metrics.csv"
+    }
+  },
+  "replay_metrics": {
+    "case_count": 4,
+    "success_count": 4,
+    "fail_count": 0,
+    "direction_accuracy": 0.0,
+    "mean_abs_return_error": 0.0616469458914649,
+    "median_abs_return_error": 0.0623778352876931,
+    "rmse_return_error": 0.0651482198778388,
+    "sample_warning": "样本过小，仅验证工程链路，不代表真实市场预测能力。"
+  },
+  "cards": [
+    {
+      "symbol": "510300",
+      "display_name": "沪深300ETF",
+      "as_of_date": "2026-06-03",
+      "candidate_rank": 1,
+      "left_score": null,
+      "model_status": "PASS",
+      "prediction_direction_label": "DOWN",
+      "pred_return_last": -0.043268859386444,
+      "pred_range_pct": 0.0421845316886902,
+      "pred_close_volatility": 0.0636373683810234,
+      "observation_level": "HIGH_VOLATILITY",
+      "notes": ""
+    },
+    {
+      "symbol": "159915",
+      "display_name": "创业板ETF",
+      "as_of_date": "2026-06-03",
+      "candidate_rank": 2,
+      "left_score": null,
+      "model_status": "PASS",
+      "prediction_direction_label": "DOWN",
+      "pred_return_last": -0.066340684890747,
+      "pred_range_pct": 0.0352364778518677,
+      "pred_close_volatility": 0.0276338420808315,
+      "observation_level": "NORMAL",
+      "notes": ""
+    }
+  ]
+}
