@@ -1,0 +1,35 @@
+{
+  "mode": "market_data_network_diagnosis",
+  "version": "V0.10.2-C",
+  "generated_at": "2026-06-03T23:11:29",
+  "python_executable": "E:\\AETF-ModelLab\\.venv\\Scripts\\python.exe",
+  "proxy_env_present": {
+    "HTTP_PROXY": false,
+    "HTTPS_PROXY": false,
+    "ALL_PROXY": false,
+    "NO_PROXY": false
+  },
+  "winhttp_proxy": {
+    "status": "PASS",
+    "returncode": 0,
+    "stdout": "Current WinHTTP proxy settings:\n\n    Proxy Server(s) :  http=127.0.0.1:10809;https=127.0.0.1:10809\n    Bypass List     :  localhost;127.*;^<local^>",
+    "stderr": ""
+  },
+  "akshare": {
+    "status": "FAIL",
+    "row_count": 0,
+    "columns": [],
+    "error_message": "HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&beg=20240101&end=20240201&secid=1.510300 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))"
+  },
+  "baostock": {
+    "status": "FAIL",
+    "symbol": "",
+    "row_count": 0,
+    "error_message": "BaoStock returned zero rows."
+  },
+  "no_model_training": true,
+  "no_torchrun": true,
+  "no_gpu_inference": true,
+  "no_left_project_connection": true,
+  "no_market_advice": true
+}

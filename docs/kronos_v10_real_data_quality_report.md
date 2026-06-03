@@ -1,9 +1,9 @@
 # Kronos V0.10 Real Data Quality Report
 
-- V0.10 运行时间: 2026-06-03 21:49:06
+- V0.10 运行时间: 2026-06-03 23:17:01
 - 输入 raw_kline_dir: data/real/raw/kline
 - 输入 raw_candidates_dir: data/real/raw/candidates
-- symbol_count: 15
+- symbol_count: 48
 - qualified_symbol_count: 15
 - candidate_date_count: 0
 - replay_case_count: 0
@@ -13,13 +13,12 @@
 - dataset manifest 路径: outputs/real_data/kronos_v10_real_dataset_manifest.json
 - expanded replay cases 路径: data/real/replay/kronos_v10_expanded_replay_cases.csv
 - readiness JSON 路径: outputs/real_data/kronos_v10_replay_readiness.json
-- pytest 结果: PASS (91 passed in 2.57s)
+- pytest 结果: PASS (100 passed in 2.35s)
 - 是否可以进入 V0.11 真实数据 zero-shot 回放评估: 否
 
 ## 主要数据质量错误
 
 - Real candidate history CSV is missing.
-- symbol_count 15 is below min_symbols 20.
 - qualified_symbol_count 15 is below min_symbols 20.
 - replay_case_count 0 is below min_replay_cases 200.
 

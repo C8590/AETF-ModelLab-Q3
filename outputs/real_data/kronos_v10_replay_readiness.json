@@ -1,7 +1,7 @@
 {
   "mode": "real_etf_data_preparation",
   "data_status": "CANDIDATE_HISTORY_MISSING",
-  "symbol_count": 15,
+  "symbol_count": 48,
   "qualified_symbol_count": 15,
   "candidate_date_count": 0,
   "replay_case_count": 0,
@@ -10,7 +10,6 @@
   "is_ready_for_expanded_replay": false,
   "reasons": [
     "Real candidate history CSV is missing.",
-    "symbol_count 15 is below min_symbols 20.",
     "qualified_symbol_count 15 is below min_symbols 20.",
     "replay_case_count 0 is below min_replay_cases 200."
   ],

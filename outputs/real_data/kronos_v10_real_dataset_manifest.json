@@ -1,9 +1,9 @@
 {
   "mode": "real_etf_data_preparation",
-  "generated_at": "2026-06-03T21:49:03",
+  "generated_at": "2026-06-03T23:16:58",
   "raw_kline_dir": "E:/AETF-ModelLab/data/real/raw/kline",
   "raw_candidates_dir": "E:/AETF-ModelLab/data/real/raw/candidates",
-  "raw_kline_file_count": 15,
+  "raw_kline_file_count": 48,
   "normalized_kline_dir": "E:/AETF-ModelLab/data/real/normalized/kline",
   "dataset_profile_path": "E:/AETF-ModelLab/outputs/real_data/kronos_v10_real_dataset_profile.csv",
   "expanded_replay_cases_path": "E:/AETF-ModelLab/data/real/replay/kronos_v10_expanded_replay_cases.csv",
@@ -12,14 +12,122 @@
   "candidate_template_path": "E:/AETF-ModelLab/data/real/raw/candidates/left_candidates_history_TEMPLATE.csv",
   "kline_files": [
     {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/159611.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/159611.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/159629.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/159629.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/159638.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/159638.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/159755.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/159755.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/159766.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/159766.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/159819.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/159819.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/159845.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/159845.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/159865.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/159865.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/159869.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/159869.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/159870.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/159870.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
       "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/159915.csv",
       "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/159915.csv",
       "status": "PASS",
       "errors": ""
     },
     {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/159919.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/159919.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/159922.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/159922.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/159928.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/159928.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/159937.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/159937.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
       "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/159949.csv",
       "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/159949.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/159967.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/159967.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/159992.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/159992.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/159995.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/159995.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/159996.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/159996.csv",
       "status": "PASS",
       "errors": ""
     },
@@ -42,8 +150,38 @@
       "errors": ""
     },
     {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/510880.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/510880.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/512010.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/512010.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
       "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/512100.csv",
       "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/512100.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/512170.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/512170.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/512200.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/512200.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/512400.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/512400.csv",
       "status": "PASS",
       "errors": ""
     },
@@ -84,8 +222,68 @@
       "errors": ""
     },
     {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/512980.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/512980.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
       "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/515030.csv",
       "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/515030.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/515050.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/515050.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/515180.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/515180.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/515230.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/515230.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/515700.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/515700.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/515790.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/515790.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/515880.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/515880.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/516160.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/516160.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/516510.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/516510.csv",
+      "status": "PASS",
+      "errors": ""
+    },
+    {
+      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/516950.csv",
+      "normalized_path": "E:/AETF-ModelLab/data/real/normalized/kline/516950.csv",
       "status": "PASS",
       "errors": ""
     },
