@@ -1,6 +1,6 @@
 # Left Candidate History Check Report
 
-- 运行时间: 2026-06-03 21:49:02
+- 运行时间: 2026-06-04 14:01:31
 - candidate_history_path: E:/AETF-ModelLab/data/real/raw/candidates/left_candidates_history.csv
 - raw_kline_dir: E:/AETF-ModelLab/data/real/raw/kline
 - candidate_history_status: CANDIDATE_HISTORY_MISSING
