@@ -1,0 +1,39 @@
+mode: "reconstructed_branch_closeout"
+
+inputs:
+  reconstructed_readiness_path: "outputs/real_data/kronos_v10_reconstructed_replay_readiness.json"
+  v11r_summary_path: "outputs/kronos_v11r_reconstructed_replay_summary.json"
+  v12r_summary_path: "outputs/kronos_v12r_reconstructed_full_summary.json"
+  v13r_diagnostics_path: "outputs/kronos_v13r_reconstructed_diagnostics.json"
+  v14r_stopline_path: "outputs/kronos_v14r_reconstructed_stopline.json"
+  v14r_error_diagnostics_path: "outputs/kronos_v14r_reconstructed_error_diagnostics.json"
+
+outputs:
+  closeout_json_path: "outputs/kronos_v15r_reconstructed_closeout.json"
+  artifact_index_path: "outputs/kronos_v15r_reconstructed_artifact_index.json"
+  decision_matrix_path: "outputs/kronos_v15r_next_step_decision_matrix.json"
+  report_path: "docs/kronos_v15r_reconstructed_closeout_report.md"
+  design_doc_path: "docs/kronos_v15r_reconstructed_closeout_design.md"
+
+closeout:
+  branch_name: "reconstructed_v1"
+  candidate_history_type: "reconstructed_not_true_left_snapshot"
+  final_branch_status: "PAUSED_BY_STOPLINE"
+  final_decision: "PAUSE_RECONSTRUCTED_BRANCH"
+  formal_v011_ready: false
+  reconstructed_branch_continue: false
+  allow_training_next: false
+  allow_trading_next: false
+
+next_steps:
+  preferred_path: "OBTAIN_TRUE_LEFT_CANDIDATE_HISTORY"
+  fallback_path: "REDESIGN_RECONSTRUCTED_CANDIDATE_RULES_FROM_V0102E2"
+  blocked_path: "DO_NOT_TRAIN_OR_TRADE_ON_RECONSTRUCTED_V1"
+
+safety:
+  allow_training: false
+  allow_torchrun: false
+  allow_gpu_inference: false
+  allow_trading_advice: false
+  allow_order_execution: false
+  allow_writeback_to_left_project: false

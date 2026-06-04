@@ -1,0 +1,137 @@
+{
+  "schema_version": "v0.15-r",
+  "generated_at": "2026-06-04T16:30:53",
+  "mode": "reconstructed_branch_artifact_index",
+  "artifact_count": 16,
+  "missing_artifact_count": 0,
+  "artifacts": [
+    {
+      "path": "outputs\\real_data\\kronos_v10_reconstructed_replay_readiness.json",
+      "exists": true,
+      "size_bytes": 780,
+      "artifact_type": "json",
+      "stage": "V0.10.2-E",
+      "note": "available"
+    },
+    {
+      "path": "outputs\\kronos_v11r_reconstructed_replay_summary.json",
+      "exists": true,
+      "size_bytes": 6092,
+      "artifact_type": "json",
+      "stage": "V0.11-R",
+      "note": "available"
+    },
+    {
+      "path": "outputs\\kronos_v12r_reconstructed_full_summary.json",
+      "exists": true,
+      "size_bytes": 14738,
+      "artifact_type": "json",
+      "stage": "V0.12-R",
+      "note": "available"
+    },
+    {
+      "path": "outputs\\kronos_v13r_reconstructed_diagnostics.json",
+      "exists": true,
+      "size_bytes": 1543,
+      "artifact_type": "json",
+      "stage": "V0.13-R",
+      "note": "available"
+    },
+    {
+      "path": "outputs\\kronos_v14r_reconstructed_stopline.json",
+      "exists": true,
+      "size_bytes": 5232,
+      "artifact_type": "json",
+      "stage": "V0.14-R",
+      "note": "available"
+    },
+    {
+      "path": "outputs\\kronos_v14r_reconstructed_error_diagnostics.json",
+      "exists": true,
+      "size_bytes": 3224,
+      "artifact_type": "json",
+      "stage": "V0.14-R",
+      "note": "available"
+    },
+    {
+      "path": "docs\\kronos_v10_reconstructed_candidate_history_report.md",
+      "exists": true,
+      "size_bytes": 1510,
+      "artifact_type": "markdown_report",
+      "stage": "V0.10.2-E",
+      "note": "available"
+    },
+    {
+      "path": "docs\\kronos_v11r_reconstructed_replay_report.md",
+      "exists": true,
+      "size_bytes": 2782,
+      "artifact_type": "markdown_report",
+      "stage": "V0.11-R",
+      "note": "available"
+    },
+    {
+      "path": "docs\\kronos_v12r_reconstructed_expansion_report.md",
+      "exists": true,
+      "size_bytes": 4658,
+      "artifact_type": "markdown_report",
+      "stage": "V0.12-R",
+      "note": "available"
+    },
+    {
+      "path": "docs\\kronos_v13r_reconstructed_dashboard_report.md",
+      "exists": true,
+      "size_bytes": 2276,
+      "artifact_type": "markdown_report",
+      "stage": "V0.13-R",
+      "note": "available"
+    },
+    {
+      "path": "docs\\kronos_v14r_reconstructed_stopline_report.md",
+      "exists": true,
+      "size_bytes": 2491,
+      "artifact_type": "markdown_report",
+      "stage": "V0.14-R",
+      "note": "available"
+    },
+    {
+      "path": "outputs\\kronos_v15r_reconstructed_closeout.json",
+      "exists": true,
+      "size_bytes": 2362,
+      "artifact_type": "json",
+      "stage": "V0.15-R",
+      "note": "available"
+    },
+    {
+      "path": "outputs\\kronos_v15r_next_step_decision_matrix.json",
+      "exists": true,
+      "size_bytes": 1215,
+      "artifact_type": "json",
+      "stage": "V0.15-R",
+      "note": "available"
+    },
+    {
+      "path": "outputs\\kronos_v15r_reconstructed_artifact_index.json",
+      "exists": true,
+      "size_bytes": 3849,
+      "artifact_type": "json",
+      "stage": "V0.15-R",
+      "note": "available"
+    },
+    {
+      "path": "docs\\kronos_v15r_reconstructed_closeout_report.md",
+      "exists": true,
+      "size_bytes": 2684,
+      "artifact_type": "markdown_report",
+      "stage": "V0.15-R",
+      "note": "available"
+    },
+    {
+      "path": "docs\\kronos_v15r_reconstructed_closeout_design.md",
+      "exists": true,
+      "size_bytes": 2836,
+      "artifact_type": "markdown_report",
+      "stage": "V0.15-R",
+      "note": "available"
+    }
+  ]
+}

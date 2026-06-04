@@ -1,0 +1,29 @@
+{
+  "schema_version": "v0.15-r",
+  "generated_at": "2026-06-04T16:30:50",
+  "mode": "reconstructed_branch_next_step_decision_matrix",
+  "branch_name": "reconstructed_v1",
+  "final_branch_status": "PAUSED_BY_STOPLINE",
+  "formal_v011_ready": false,
+  "reconstructed_branch_continue": false,
+  "paths": [
+    {
+      "path": "OBTAIN_TRUE_LEFT_CANDIDATE_HISTORY",
+      "status": "RECOMMENDED",
+      "reason": "Formal V0.11 requires true left_candidates_history.csv.",
+      "entry_condition": "A verified true left-side historical candidate file is available."
+    },
+    {
+      "path": "REDESIGN_RECONSTRUCTED_CANDIDATE_RULES_FROM_V0102E2",
+      "status": "OPTIONAL_RESEARCH",
+      "reason": "Current reconstructed_v1 is stopped; rules may be redesigned and re-evaluated from V0.10.2-E2.",
+      "entry_condition": "Research scope is explicitly limited to reconstructed branch redesign."
+    },
+    {
+      "path": "DO_NOT_TRAIN_OR_TRADE_ON_RECONSTRUCTED_V1",
+      "status": "BLOCKED",
+      "reason": "Direction accuracy is below 50 percent and below the majority-direction baseline.",
+      "entry_condition": "No entry; this path is blocked by the V0.14-R stopline."
+    }
+  ]
+}
