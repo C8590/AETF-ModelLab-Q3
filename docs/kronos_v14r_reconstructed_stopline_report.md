@@ -1,6 +1,6 @@
 # Kronos V0.14-R Reconstructed Stopline Report
 
-- 运行时间: 2026-06-04 15:59:05
+- 运行时间: 2026-06-04 16:09:31
 - 输入 predictions 路径: E:\AETF-ModelLab\outputs\kronos_v12r_reconstructed_full_predictions.csv
 - 输入 summary 路径: E:\AETF-ModelLab\outputs\kronos_v12r_reconstructed_full_summary.json
 - 输入 V0.13-R diagnostics 路径: E:\AETF-ModelLab\outputs\kronos_v13r_reconstructed_diagnostics.json
@@ -26,7 +26,7 @@
 - no_torchrun: true
 - no_gpu_call: true
 - no_left_project_connection: true
-- pytest 结果: PASS (149 passed in 2.68s)
+- pytest 结果: PASS (149 passed in 2.98s)
 - 是否可以进入正式 V0.11: false
 - 是否可以进入 V0.15-R 分支收尾或候选池重建规则再设计: true
 
