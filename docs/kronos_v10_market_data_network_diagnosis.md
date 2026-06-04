@@ -1,6 +1,6 @@
 # Kronos V0.10.2-C Market Data Network Diagnosis
 
-- 运行时间: 2026-06-03T23:11:29
+- 运行时间: 2026-06-04T13:45:05
 - Python 路径: E:\AETF-ModelLab\.venv\Scripts\python.exe
 - AkShare 最小测试: FAIL (rows=0)
 - BaoStock 最小测试: FAIL (symbol=, rows=0)

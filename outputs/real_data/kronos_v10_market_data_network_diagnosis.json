@@ -1,7 +1,7 @@
 {
   "mode": "market_data_network_diagnosis",
   "version": "V0.10.2-C",
-  "generated_at": "2026-06-03T23:11:29",
+  "generated_at": "2026-06-04T13:45:05",
   "python_executable": "E:\\AETF-ModelLab\\.venv\\Scripts\\python.exe",
   "proxy_env_present": {
     "HTTP_PROXY": false,

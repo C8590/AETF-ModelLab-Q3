@@ -1,27 +1,22 @@
 {
   "mode": "real_etf_kline_all_sources_download",
   "version": "V0.10.2-C",
-  "generated_at": "2026-06-03T23:15:21",
+  "generated_at": "2026-06-04T13:45:35",
   "config_path": "E:/AETF-ModelLab/configs/real_etf_universe.yaml",
   "raw_kline_dir": "E:/AETF-ModelLab/data/real/raw/kline",
   "configured_count": 48,
-  "initial_total_available_raw_csv_count": 15,
+  "initial_total_available_raw_csv_count": 48,
   "initial_qualified_raw_csv_count": 15,
   "total_available_raw_csv_count": 48,
-  "qualified_raw_csv_count": 15,
+  "qualified_raw_csv_count": 20,
   "target_qualified_raw_csv_count": 20,
   "min_bars": 1000,
-  "akshare_success_count": 0,
-  "baostock_success_count": 33,
+  "akshare_success_count": 5,
+  "baostock_success_count": 0,
   "tushare_status": "SKIPPED_TOKEN_MISSING",
   "tushare_enabled": false,
   "tushare_success_count": 0,
   "failed_symbols": [
-    "159928",
-    "159996",
-    "159992",
-    "512010",
-    "159937",
     "510880",
     "515180",
     "515790",
@@ -55,302 +50,60 @@
     {
       "symbol": "159928",
       "source_name": "akshare.fund_etf_hist_em",
-      "status": "FAIL",
-      "bar_count": 0,
+      "status": "DOWNLOADED",
+      "bar_count": 2040,
       "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/159928.csv",
       "attempts": 3,
-      "error_message": "HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&beg=20180101&end=20260603&secid=0.159928 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))"
+      "error_message": "",
+      "start_date": "2018-01-02",
+      "end_date": "2026-06-03"
     },
     {
       "symbol": "159996",
       "source_name": "akshare.fund_etf_hist_em",
-      "status": "FAIL",
-      "bar_count": 0,
+      "status": "DOWNLOADED",
+      "bar_count": 1507,
       "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/159996.csv",
-      "attempts": 3,
-      "error_message": "HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&beg=20180101&end=20260603&secid=0.159996 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))"
+      "attempts": 2,
+      "error_message": "",
+      "start_date": "2020-03-16",
+      "end_date": "2026-06-03"
     },
     {
       "symbol": "159992",
       "source_name": "akshare.fund_etf_hist_em",
-      "status": "FAIL",
-      "bar_count": 0,
+      "status": "DOWNLOADED",
+      "bar_count": 1489,
       "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/159992.csv",
-      "attempts": 3,
-      "error_message": "HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&beg=20180101&end=20260603&secid=0.159992 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))"
+      "attempts": 1,
+      "error_message": "",
+      "start_date": "2020-04-10",
+      "end_date": "2026-06-03"
     },
     {
       "symbol": "512010",
       "source_name": "akshare.fund_etf_hist_em",
-      "status": "FAIL",
-      "bar_count": 0,
+      "status": "DOWNLOADED",
+      "bar_count": 2039,
       "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/512010.csv",
-      "attempts": 3,
-      "error_message": "HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&beg=20180101&end=20260603&secid=1.512010 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))"
+      "attempts": 1,
+      "error_message": "",
+      "start_date": "2018-01-02",
+      "end_date": "2026-06-03"
     },
     {
       "symbol": "159937",
       "source_name": "akshare.fund_etf_hist_em",
-      "status": "FAIL",
-      "bar_count": 0,
+      "status": "DOWNLOADED",
+      "bar_count": 2040,
       "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/159937.csv",
-      "attempts": 3,
-      "error_message": "HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&beg=20180101&end=20260603&secid=0.159937 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))"
-    },
-    {
-      "symbol": "510880",
-      "source_name": "akshare.fund_etf_hist_em",
-      "status": "FAIL",
-      "bar_count": 0,
-      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/510880.csv",
-      "attempts": 3,
-      "error_message": "HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&beg=20180101&end=20260603&secid=1.510880 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))"
-    },
-    {
-      "symbol": "515180",
-      "source_name": "akshare.fund_etf_hist_em",
-      "status": "FAIL",
-      "bar_count": 0,
-      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/515180.csv",
-      "attempts": 3,
-      "error_message": "HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&beg=20180101&end=20260603&secid=1.515180 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))"
-    },
-    {
-      "symbol": "515790",
-      "source_name": "akshare.fund_etf_hist_em",
-      "status": "FAIL",
-      "bar_count": 0,
-      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/515790.csv",
-      "attempts": 3,
-      "error_message": "HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&beg=20180101&end=20260603&secid=1.515790 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))"
-    },
-    {
-      "symbol": "516160",
-      "source_name": "akshare.fund_etf_hist_em",
-      "status": "FAIL",
-      "bar_count": 0,
-      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/516160.csv",
-      "attempts": 3,
-      "error_message": "HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&beg=20180101&end=20260603&secid=1.516160 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))"
-    },
-    {
-      "symbol": "515700",
-      "source_name": "akshare.fund_etf_hist_em",
-      "status": "FAIL",
-      "bar_count": 0,
-      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/515700.csv",
-      "attempts": 3,
-      "error_message": "HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&beg=20180101&end=20260603&secid=1.515700 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))"
-    },
-    {
-      "symbol": "516950",
-      "source_name": "akshare.fund_etf_hist_em",
-      "status": "FAIL",
-      "bar_count": 0,
-      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/516950.csv",
-      "attempts": 3,
-      "error_message": "HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&beg=20180101&end=20260603&secid=1.516950 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))"
-    },
-    {
-      "symbol": "512400",
-      "source_name": "akshare.fund_etf_hist_em",
-      "status": "FAIL",
-      "bar_count": 0,
-      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/512400.csv",
-      "attempts": 3,
-      "error_message": "HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&beg=20180101&end=20260603&secid=1.512400 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))"
-    },
-    {
-      "symbol": "512170",
-      "source_name": "akshare.fund_etf_hist_em",
-      "status": "FAIL",
-      "bar_count": 0,
-      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/512170.csv",
-      "attempts": 3,
-      "error_message": "HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&beg=20180101&end=20260603&secid=1.512170 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))"
-    },
-    {
-      "symbol": "512980",
-      "source_name": "akshare.fund_etf_hist_em",
-      "status": "FAIL",
-      "bar_count": 0,
-      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/512980.csv",
-      "attempts": 3,
-      "error_message": "HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&beg=20180101&end=20260603&secid=1.512980 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))"
-    },
-    {
-      "symbol": "512200",
-      "source_name": "akshare.fund_etf_hist_em",
-      "status": "FAIL",
-      "bar_count": 0,
-      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/512200.csv",
-      "attempts": 3,
-      "error_message": "HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&beg=20180101&end=20260603&secid=1.512200 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))"
-    },
-    {
-      "symbol": "515050",
-      "source_name": "akshare.fund_etf_hist_em",
-      "status": "FAIL",
-      "bar_count": 0,
-      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/515050.csv",
-      "attempts": 3,
-      "error_message": "HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&beg=20180101&end=20260603&secid=1.515050 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))"
-    },
-    {
-      "symbol": "515880",
-      "source_name": "akshare.fund_etf_hist_em",
-      "status": "FAIL",
-      "bar_count": 0,
-      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/515880.csv",
-      "attempts": 3,
-      "error_message": "HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&beg=20180101&end=20260603&secid=1.515880 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))"
-    },
-    {
-      "symbol": "516510",
-      "source_name": "akshare.fund_etf_hist_em",
-      "status": "FAIL",
-      "bar_count": 0,
-      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/516510.csv",
-      "attempts": 3,
-      "error_message": "HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&beg=20180101&end=20260603&secid=1.516510 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))"
-    },
-    {
-      "symbol": "515230",
-      "source_name": "akshare.fund_etf_hist_em",
-      "status": "FAIL",
-      "bar_count": 0,
-      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/515230.csv",
-      "attempts": 3,
-      "error_message": "HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&beg=20180101&end=20260603&secid=1.515230 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))"
-    },
-    {
-      "symbol": "159995",
-      "source_name": "akshare.fund_etf_hist_em",
-      "status": "FAIL",
-      "bar_count": 0,
-      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/159995.csv",
-      "attempts": 3,
-      "error_message": "HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&beg=20180101&end=20260603&secid=0.159995 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))"
-    },
-    {
-      "symbol": "159845",
-      "source_name": "akshare.fund_etf_hist_em",
-      "status": "FAIL",
-      "bar_count": 0,
-      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/159845.csv",
-      "attempts": 3,
-      "error_message": "HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&beg=20180101&end=20260603&secid=0.159845 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))"
-    },
-    {
-      "symbol": "159629",
-      "source_name": "akshare.fund_etf_hist_em",
-      "status": "FAIL",
-      "bar_count": 0,
-      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/159629.csv",
-      "attempts": 3,
-      "error_message": "HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&beg=20180101&end=20260603&secid=0.159629 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))"
-    },
-    {
-      "symbol": "159919",
-      "source_name": "akshare.fund_etf_hist_em",
-      "status": "FAIL",
-      "bar_count": 0,
-      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/159919.csv",
-      "attempts": 3,
-      "error_message": "HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&beg=20180101&end=20260603&secid=0.159919 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))"
-    },
-    {
-      "symbol": "159922",
-      "source_name": "akshare.fund_etf_hist_em",
-      "status": "FAIL",
-      "bar_count": 0,
-      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/159922.csv",
-      "attempts": 3,
-      "error_message": "HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&beg=20180101&end=20260603&secid=0.159922 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))"
-    },
-    {
-      "symbol": "159967",
-      "source_name": "akshare.fund_etf_hist_em",
-      "status": "FAIL",
-      "bar_count": 0,
-      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/159967.csv",
-      "attempts": 3,
-      "error_message": "HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&beg=20180101&end=20260603&secid=0.159967 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))"
-    },
-    {
-      "symbol": "159819",
-      "source_name": "akshare.fund_etf_hist_em",
-      "status": "FAIL",
-      "bar_count": 0,
-      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/159819.csv",
-      "attempts": 3,
-      "error_message": "HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&beg=20180101&end=20260603&secid=0.159819 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))"
-    },
-    {
-      "symbol": "159869",
-      "source_name": "akshare.fund_etf_hist_em",
-      "status": "FAIL",
-      "bar_count": 0,
-      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/159869.csv",
-      "attempts": 3,
-      "error_message": "HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&beg=20180101&end=20260603&secid=0.159869 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))"
-    },
-    {
-      "symbol": "159766",
-      "source_name": "akshare.fund_etf_hist_em",
-      "status": "FAIL",
-      "bar_count": 0,
-      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/159766.csv",
-      "attempts": 3,
-      "error_message": "HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&beg=20180101&end=20260603&secid=0.159766 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))"
-    },
-    {
-      "symbol": "159865",
-      "source_name": "akshare.fund_etf_hist_em",
-      "status": "FAIL",
-      "bar_count": 0,
-      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/159865.csv",
-      "attempts": 3,
-      "error_message": "HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&beg=20180101&end=20260603&secid=0.159865 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))"
-    },
-    {
-      "symbol": "159870",
-      "source_name": "akshare.fund_etf_hist_em",
-      "status": "FAIL",
-      "bar_count": 0,
-      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/159870.csv",
-      "attempts": 3,
-      "error_message": "HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&beg=20180101&end=20260603&secid=0.159870 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))"
-    },
-    {
-      "symbol": "159611",
-      "source_name": "akshare.fund_etf_hist_em",
-      "status": "FAIL",
-      "bar_count": 0,
-      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/159611.csv",
-      "attempts": 3,
-      "error_message": "HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&beg=20180101&end=20260603&secid=0.159611 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))"
-    },
-    {
-      "symbol": "159638",
-      "source_name": "akshare.fund_etf_hist_em",
-      "status": "FAIL",
-      "bar_count": 0,
-      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/159638.csv",
-      "attempts": 3,
-      "error_message": "HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&beg=20180101&end=20260603&secid=0.159638 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))"
-    },
-    {
-      "symbol": "159755",
-      "source_name": "akshare.fund_etf_hist_em",
-      "status": "FAIL",
-      "bar_count": 0,
-      "raw_path": "E:/AETF-ModelLab/data/real/raw/kline/159755.csv",
-      "attempts": 3,
-      "error_message": "HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&beg=20180101&end=20260603&secid=0.159755 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))"
+      "attempts": 1,
+      "error_message": "",
+      "start_date": "2018-01-02",
+      "end_date": "2026-06-03"
     }
   ],
-  "baostock_manifest_path": "E:\\AETF-ModelLab\\outputs\\real_data\\kronos_v10_baostock_download_manifest.json",
+  "baostock_manifest_path": "",
   "tushare_manifest_path": "",
   "manifest_path": "E:/AETF-ModelLab/outputs/real_data/kronos_v10_all_sources_download_manifest.json",
   "report_path": "E:/AETF-ModelLab/docs/kronos_v10_all_sources_download_report.md",

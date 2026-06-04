@@ -1,16 +1,16 @@
 # Kronos V0.10.2-C All Sources ETF Kline Download Report
 
-- 运行时间: 2026-06-03T23:15:21
+- 运行时间: 2026-06-04T13:45:35
 - ETF universe 配置数量: 48
 - 初始 qualified raw CSV 数量: 15
 - 最终 raw kline CSV 总数: 48
-- 最终 qualified raw CSV 数量: 15
+- 最终 qualified raw CSV 数量: 20
 - 目标 qualified raw CSV 数量: 20
-- AkShare 成功数量: 0
-- BaoStock 成功数量: 33
+- AkShare 成功数量: 5
+- BaoStock 成功数量: 0
 - Tushare 状态: SKIPPED_TOKEN_MISSING
 - Tushare 成功数量: 0
-- 仍失败 ETF 数量: 33
+- 仍失败 ETF 数量: 28
 
 ## 数据源混用风险
 
@@ -19,11 +19,6 @@
 
 ## 仍失败 ETF
 
-- 159928
-- 159996
-- 159992
-- 512010
-- 159937
 - 510880
 - 515180
 - 515790
