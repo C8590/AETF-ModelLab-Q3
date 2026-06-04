@@ -1,0 +1,23 @@
+{
+  "mode": "reconstructed_candidate_history_only",
+  "candidate_history_type": "reconstructed_not_true_left_snapshot",
+  "candidate_date_count": 300,
+  "row_count": 1500,
+  "symbol_count": 27,
+  "replay_case_count": 1341,
+  "is_ready_for_reconstructed_replay": true,
+  "is_true_left_history": false,
+  "can_enter_formal_v011": false,
+  "can_enter_v011_reconstructed": true,
+  "prevent_lookahead_bias": true,
+  "reasons": [],
+  "warnings": [
+    "Reconstructed candidate history is not true left-side historical snapshot data.",
+    "This output cannot be used for formal V0.11 true left history replay."
+  ],
+  "no_model_training": true,
+  "no_torchrun": true,
+  "no_gpu_inference": true,
+  "no_left_project_connection": true,
+  "no_market_advice": true
+}

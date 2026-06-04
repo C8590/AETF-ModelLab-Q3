@@ -1,0 +1,35 @@
+mode: "reconstructed_candidate_history_only"
+
+inputs:
+  normalized_kline_dir: "data/real/normalized/kline"
+
+outputs:
+  reconstructed_candidate_history_path: "data/real/reconstructed/left_candidates_history_RECONSTRUCTED.csv"
+  reconstructed_replay_cases_path: "data/real/replay/kronos_v10_reconstructed_replay_cases.csv"
+  manifest_path: "outputs/real_data/kronos_v10_reconstructed_candidate_manifest.json"
+  readiness_path: "outputs/real_data/kronos_v10_reconstructed_replay_readiness.json"
+  report_path: "docs/kronos_v10_reconstructed_candidate_history_report.md"
+
+reconstruction:
+  candidate_top_n: 5
+  min_symbols_per_date: 10
+  min_candidate_dates: 100
+  min_replay_cases: 200
+  lookback_for_replay: 120
+  pred_len_for_replay: 24
+  feature_windows:
+    momentum_short: 20
+    momentum_mid: 60
+    volatility: 20
+    liquidity: 20
+  max_candidate_dates: 300
+
+safety:
+  candidate_history_type: "reconstructed_not_true_left_snapshot"
+  allow_overwrite_true_left_history: false
+  allow_training: false
+  allow_gpu_inference: false
+  allow_trading_advice: false
+  allow_order_execution: false
+  allow_writeback_to_left_project: false
+  prevent_lookahead_bias: true
