@@ -1,0 +1,131 @@
+{
+  "schema_version": "v0.14-r",
+  "generated_at": "2026-06-04T15:59:02",
+  "mode": "reconstructed_branch_error_diagnostics_stopline",
+  "candidate_history_type": "reconstructed_not_true_left_snapshot",
+  "evaluated_case_count": 1341,
+  "direction_accuracy": 0.40939597315436244,
+  "majority_direction_accuracy": 0.6017897091722595,
+  "wilson_interval": {
+    "success_count": 549,
+    "total_count": 1341,
+    "point_estimate": 0.40939597315436244,
+    "lower": 0.38337259776730287,
+    "upper": 0.4359369774272778,
+    "z": 1.96
+  },
+  "mean_abs_return_error": 0.15708397727969794,
+  "median_abs_return_error": 0.1382922503969841,
+  "rmse_return_error": 0.19508706514643384,
+  "direction_accuracy_delta_vs_v11r": -0.1456040268456376,
+  "group_stability": {
+    "by_symbol": {
+      "group_name": "symbol",
+      "group_count": 20,
+      "eligible_group_count": 18,
+      "stable_group_count": 8,
+      "weak_group_count": 10,
+      "min_cases": 20,
+      "weighted_direction_accuracy": 0.4092987804878049,
+      "min_direction_accuracy": 0.1259842519685039,
+      "max_direction_accuracy": 0.8636363636363636
+    },
+    "by_rank": {
+      "group_name": "candidate_rank",
+      "group_count": 5,
+      "eligible_group_count": 5,
+      "stable_group_count": 0,
+      "weak_group_count": 5,
+      "min_cases": 20,
+      "weighted_direction_accuracy": 0.40939597315436244,
+      "min_direction_accuracy": 0.3623188405797101,
+      "max_direction_accuracy": 0.4714828897338403
+    },
+    "by_month": {
+      "group_name": "month",
+      "group_count": 14,
+      "eligible_group_count": 14,
+      "stable_group_count": 5,
+      "weak_group_count": 9,
+      "min_cases": 20,
+      "weighted_direction_accuracy": 0.40939597315436244,
+      "min_direction_accuracy": 0.0782608695652174,
+      "max_direction_accuracy": 0.9285714285714286
+    }
+  },
+  "error_distribution": {
+    "count": 1341,
+    "mean_abs_return_error": 0.15708397727969794,
+    "median_abs_return_error": 0.1382922503969841,
+    "p90_abs_return_error": 0.3325899136658573,
+    "p95_abs_return_error": 0.3762738660473348,
+    "max_abs_return_error": 0.4965718470978697,
+    "mean_signed_return_error": -0.14854294291843553,
+    "rmse_return_error": 0.19508706514643384
+  },
+  "v13r_diagnostics": {
+    "mode": "reconstructed_branch_dashboard",
+    "candidate_history_type": "reconstructed_not_true_left_snapshot",
+    "evaluated_case_count": 1341,
+    "success_count": 1341,
+    "fail_count": 0,
+    "direction_accuracy": 0.40939597315436244,
+    "v11r_baseline_direction_accuracy": 0.555,
+    "direction_accuracy_delta_vs_v11r": -0.1456040268456376,
+    "mean_abs_return_error": 0.15708397727969794,
+    "median_abs_return_error": 0.1382922503969841,
+    "rmse_return_error": 0.19508706514643384,
+    "performance_interpretation": [
+      "UNDER_50_PERCENT_DIRECTION_ACCURACY",
+      "V11R_BASELINE_NOT_STABLE",
+      "ENGINEERING_PIPELINE_STABLE"
+    ],
+    "stability_warning": "FULL_EXPANSION_DID_NOT_CONFIRM_V11R_200_CASE_BASELINE_STABILITY",
+    "formal_v011_ready": false,
+    "reconstructed_branch_only": true,
+    "zero_shot": true,
+    "no_training": true,
+    "no_torchrun": true,
+    "no_gpu_call": true,
+    "no_checkpoint": true,
+    "not_trading_advice": true,
+    "execution_allowed": false,
+    "left_project_writeback_allowed": false,
+    "recommended_next_step": "Proceed to V0.14-R reconstructed error diagnostics or stop-line review; do not enter formal V0.11.",
+    "warnings": [
+      "Reconstructed candidate history is not true left history and does not represent formal V0.11 left-side historical candidate performance.",
+      "V0.12-R full expansion did not confirm the V0.11-R 200-case baseline stability.",
+      "Current direction_accuracy=0.4094 does not support any market conclusion.",
+      "This is V0.13-R, not formal V0.13."
+    ]
+  },
+  "decision": "PAUSE_RECONSTRUCTED_BRANCH",
+  "decision_level": "STOPLINE",
+  "blockers": [
+    "DIRECTION_ACCURACY_UNDER_50_PERCENT",
+    "DIRECTION_ACCURACY_BELOW_CONTINUE_THRESHOLD",
+    "NO_CLEAR_MARGIN_VS_MAJORITY_DIRECTION_BASELINE",
+    "V11R_BASELINE_NOT_STABLE",
+    "MEAN_ABS_RETURN_ERROR_ABOVE_CONTINUE_THRESHOLD",
+    "RMSE_RETURN_ERROR_ABOVE_CONTINUE_THRESHOLD",
+    "STABLE_MONTH_GROUP_COUNT_BELOW_THRESHOLD",
+    "RECONSTRUCTED_HISTORY_IS_NOT_TRUE_LEFT_HISTORY"
+  ],
+  "next_step": "Enter V0.15-R branch closeout or candidate pool reconstruction rule redesign; do not enter formal V0.11.",
+  "formal_v011_ready": false,
+  "reconstructed_branch_continue": false,
+  "reconstructed_branch_only": true,
+  "zero_shot": true,
+  "no_training": true,
+  "no_torchrun": true,
+  "no_gpu_call": true,
+  "no_checkpoint": true,
+  "not_trading_advice": true,
+  "execution_allowed": false,
+  "left_project_writeback_allowed": false,
+  "notes": [
+    "Reconstructed candidate history is not true left-side historical candidate data.",
+    "V0.12-R full expansion did not confirm V0.11-R 200-case baseline stability.",
+    "Current direction accuracy is below 50 percent and does not support continuing this reconstructed route as an effective prediction path."
+  ]
+}

@@ -1,0 +1,48 @@
+mode: "reconstructed_branch_error_diagnostics_stopline"
+
+inputs:
+  predictions_path: "outputs/kronos_v12r_reconstructed_full_predictions.csv"
+  metrics_path: "outputs/kronos_v12r_reconstructed_full_metrics.csv"
+  summary_json_path: "outputs/kronos_v12r_reconstructed_full_summary.json"
+  diagnostics_json_path: "outputs/kronos_v13r_reconstructed_diagnostics.json"
+  group_by_symbol_path: "outputs/kronos_v12r_group_by_symbol.csv"
+  group_by_rank_path: "outputs/kronos_v12r_group_by_candidate_rank.csv"
+  group_by_month_path: "outputs/kronos_v12r_group_by_month.csv"
+
+outputs:
+  stopline_json_path: "outputs/kronos_v14r_reconstructed_stopline.json"
+  diagnostics_json_path: "outputs/kronos_v14r_reconstructed_error_diagnostics.json"
+  error_by_symbol_path: "outputs/kronos_v14r_error_by_symbol.csv"
+  error_by_rank_path: "outputs/kronos_v14r_error_by_rank.csv"
+  error_by_month_path: "outputs/kronos_v14r_error_by_month.csv"
+  extreme_errors_path: "outputs/kronos_v14r_extreme_errors.csv"
+  report_path: "docs/kronos_v14r_reconstructed_stopline_report.md"
+  design_doc_path: "docs/kronos_v14r_reconstructed_stopline_design.md"
+
+thresholds:
+  min_cases_for_stopline: 1000
+  min_direction_accuracy_to_continue: 0.52
+  min_direction_accuracy_margin_vs_majority_baseline: 0.02
+  max_mean_abs_return_error_to_continue: 0.10
+  max_rmse_return_error_to_continue: 0.15
+  max_negative_delta_vs_v11r_baseline: -0.05
+  min_stable_symbol_group_count: 5
+  min_stable_month_group_count: 6
+
+evaluation:
+  candidate_history_type: "reconstructed_not_true_left_snapshot"
+  allow_formal_v011_claim: false
+  allow_reconstructed_branch_claim: true
+  zero_shot: true
+  no_training: true
+  compute_majority_direction_baseline: true
+  compute_wilson_interval: true
+  compute_extreme_errors: true
+
+safety:
+  allow_training: false
+  allow_torchrun: false
+  allow_gpu_inference: false
+  allow_trading_advice: false
+  allow_order_execution: false
+  allow_writeback_to_left_project: false
