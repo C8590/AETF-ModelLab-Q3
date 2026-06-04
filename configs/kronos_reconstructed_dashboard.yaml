@@ -1,0 +1,39 @@
+mode: "reconstructed_branch_dashboard"
+
+inputs:
+  summary_json_path: "outputs/kronos_v12r_reconstructed_full_summary.json"
+  metrics_path: "outputs/kronos_v12r_reconstructed_full_metrics.csv"
+  predictions_path: "outputs/kronos_v12r_reconstructed_full_predictions.csv"
+  group_by_symbol_path: "outputs/kronos_v12r_group_by_symbol.csv"
+  group_by_rank_path: "outputs/kronos_v12r_group_by_candidate_rank.csv"
+  group_by_month_path: "outputs/kronos_v12r_group_by_month.csv"
+
+outputs:
+  dashboard_json_path: "outputs/kronos_v13r_reconstructed_dashboard.json"
+  dashboard_html_path: "outputs/kronos_v13r_reconstructed_dashboard.html"
+  diagnostic_json_path: "outputs/kronos_v13r_reconstructed_diagnostics.json"
+  report_path: "docs/kronos_v13r_reconstructed_dashboard_report.md"
+  design_doc_path: "docs/kronos_v13r_reconstructed_dashboard_design.md"
+
+display:
+  title: "AETF ModelLab - Kronos Reconstructed Branch Dashboard V0.13-R"
+  top_n_symbols: 20
+  top_n_months: 24
+  baseline_direction_accuracy: 0.555
+  full_direction_accuracy: 0.40939597315436244
+  highlight_negative_delta: true
+
+evaluation:
+  candidate_history_type: "reconstructed_not_true_left_snapshot"
+  allow_formal_v011_claim: false
+  allow_reconstructed_branch_claim: true
+  zero_shot: true
+  no_training: true
+
+safety:
+  allow_training: false
+  allow_torchrun: false
+  allow_gpu_inference: false
+  allow_trading_advice: false
+  allow_order_execution: false
+  allow_writeback_to_left_project: false

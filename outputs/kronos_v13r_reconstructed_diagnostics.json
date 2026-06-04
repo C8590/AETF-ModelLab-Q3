@@ -1,0 +1,36 @@
+{
+  "mode": "reconstructed_branch_dashboard",
+  "candidate_history_type": "reconstructed_not_true_left_snapshot",
+  "evaluated_case_count": 1341,
+  "success_count": 1341,
+  "fail_count": 0,
+  "direction_accuracy": 0.40939597315436244,
+  "v11r_baseline_direction_accuracy": 0.555,
+  "direction_accuracy_delta_vs_v11r": -0.1456040268456376,
+  "mean_abs_return_error": 0.15708397727969794,
+  "median_abs_return_error": 0.1382922503969841,
+  "rmse_return_error": 0.19508706514643384,
+  "performance_interpretation": [
+    "UNDER_50_PERCENT_DIRECTION_ACCURACY",
+    "V11R_BASELINE_NOT_STABLE",
+    "ENGINEERING_PIPELINE_STABLE"
+  ],
+  "stability_warning": "FULL_EXPANSION_DID_NOT_CONFIRM_V11R_200_CASE_BASELINE_STABILITY",
+  "formal_v011_ready": false,
+  "reconstructed_branch_only": true,
+  "zero_shot": true,
+  "no_training": true,
+  "no_torchrun": true,
+  "no_gpu_call": true,
+  "no_checkpoint": true,
+  "not_trading_advice": true,
+  "execution_allowed": false,
+  "left_project_writeback_allowed": false,
+  "recommended_next_step": "Proceed to V0.14-R reconstructed error diagnostics or stop-line review; do not enter formal V0.11.",
+  "warnings": [
+    "Reconstructed candidate history is not true left history and does not represent formal V0.11 left-side historical candidate performance.",
+    "V0.12-R full expansion did not confirm the V0.11-R 200-case baseline stability.",
+    "Current direction_accuracy=0.4094 does not support any market conclusion.",
+    "This is V0.13-R, not formal V0.13."
+  ]
+}

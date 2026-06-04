@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AETF ModelLab - Kronos Reconstructed Branch Dashboard V0.13-R</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #20242a;
+      --muted: #667085;
+      --line: #d5dbe3;
+      --paper: #ffffff;
+      --band: #f4f6f8;
+      --critical: #9f1239;
+      --critical-bg: #fff1f2;
+      --accent: #155e75;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font: 14px/1.55 "Segoe UI", Arial, sans-serif;
+    }
+    header {
+      padding: 24px 32px 18px;
+      border-bottom: 1px solid var(--line);
+      background: var(--band);
+    }
+    main { padding: 0 32px 34px; }
+    h1 { margin: 0 0 8px; font-size: 24px; }
+    h2 { margin: 28px 0 12px; font-size: 17px; }
+    .muted { color: var(--muted); }
+    .banner {
+      margin-top: 16px;
+      padding: 14px 16px;
+      border: 1px solid #fecdd3;
+      background: var(--critical-bg);
+      color: var(--critical);
+      border-radius: 6px;
+      font-weight: 700;
+    }
+    .banner ul { margin: 8px 0 0; padding-left: 20px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .metric {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 12px;
+      background: #fff;
+    }
+    .metric strong { display: block; margin-top: 5px; font-size: 18px; }
+    .delta strong { color: var(--critical); }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid var(--line);
+      background: #fff;
+      margin-bottom: 18px;
+    }
+    th, td {
+      padding: 9px 10px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+      overflow-wrap: anywhere;
+    }
+    th { background: var(--band); }
+    tbody tr:last-child td { border-bottom: 0; }
+    .note { max-width: 980px; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AETF ModelLab - Kronos Reconstructed Branch Dashboard V0.13-R</h1>
+    <div class="muted">Generated at 2026-06-04T15:40:56 · mode: reconstructed_branch_dashboard</div>
+    <div class="banner">
+      Reconstructed branch only. Not formal V0.11. Not true left history. Not trading advice.
+      <ul><li>Reconstructed branch only</li><li>Not formal V0.11</li><li>Not true left history</li><li>Not trading advice</li><li>No order execution</li><li>No writeback to left project</li><li>No training</li></ul>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>Headline Diagnostics</h2>
+      <div class="grid">
+        <div class="metric">candidate_history_type<strong>reconstructed_not_true_left_snapshot</strong></div>
+        <div class="metric">evaluated_case_count<strong>1341</strong></div>
+        <div class="metric">success_count<strong>1341</strong></div>
+        <div class="metric">fail_count<strong>0</strong></div>
+        <div class="metric">direction_accuracy<strong>0.409396</strong></div>
+        <div class="metric">mean_abs_return_error<strong>0.157084</strong></div>
+        <div class="metric">rmse_return_error<strong>0.195087</strong></div>
+      </div>
+    </section>
+    <section>
+      <h2>Baseline Comparison</h2>
+      <div class="grid">
+        <div class="metric">V0.11-R 200-case baseline<strong>0.555</strong></div>
+        <div class="metric">V0.12-R full expansion<strong>0.409396</strong></div>
+        <div class="metric delta">direction_accuracy_delta_vs_v11r<strong>-0.145604</strong></div>
+      </div>
+      <p class="note">Full expansion did not confirm the 200-case baseline stability. V0.12-R direction_accuracy fell from 0.555 to 0.4094, so this reconstructed branch is a cautious diagnostic result, not a formal V0.11 result.</p>
+    </section>
+    <section>
+      <h2>Diagnostics</h2>
+      <p class="note">performance_interpretation: UNDER_50_PERCENT_DIRECTION_ACCURACY, V11R_BASELINE_NOT_STABLE, ENGINEERING_PIPELINE_STABLE</p>
+      <p class="note">stability_warning: FULL_EXPANSION_DID_NOT_CONFIRM_V11R_200_CASE_BASELINE_STABILITY</p>
+      <p class="note">formal_v011_ready: false · reconstructed_branch_only: true · no_training: true · no_torchrun: true · no_gpu_call: true</p>
+    </section>
+    <section>
+      <h2>By Symbol</h2>
+      <table><thead><tr><th>symbol</th><th>case_count</th><th>success_count</th><th>fail_count</th><th>direction_accuracy</th><th>mean_abs_return_error</th><th>median_abs_return_error</th><th>rmse_return_error</th></tr></thead><tbody><tr><td>159915</td><td>155</td><td>155</td><td>0</td><td>0.187097</td><td>0.244487</td><td>0.243575</td><td>0.267784</td></tr>
+<tr><td>159928</td><td>20</td><td>20</td><td>0</td><td>0.5</td><td>0.0250593</td><td>0.0175876</td><td>0.0313786</td></tr>
+<tr><td>159937</td><td>124</td><td>124</td><td>0</td><td>0.443548</td><td>0.154896</td><td>0.145356</td><td>0.172041</td></tr>
+<tr><td>159949</td><td>127</td><td>127</td><td>0</td><td>0.125984</td><td>0.302617</td><td>0.295117</td><td>0.32112</td></tr>
+<tr><td>159992</td><td>61</td><td>61</td><td>0</td><td>0.147541</td><td>0.151916</td><td>0.140469</td><td>0.176084</td></tr>
+<tr><td>159996</td><td>11</td><td>11</td><td>0</td><td>0.545455</td><td>0.0613509</td><td>0.0556453</td><td>0.0752662</td></tr>
+<tr><td>510050</td><td>84</td><td>84</td><td>0</td><td>0.47619</td><td>0.048968</td><td>0.0418419</td><td>0.0587807</td></tr>
+<tr><td>510300</td><td>105</td><td>105</td><td>0</td><td>0.533333</td><td>0.0559045</td><td>0.0529582</td><td>0.0692301</td></tr>
+<tr><td>510500</td><td>71</td><td>71</td><td>0</td><td>0.591549</td><td>0.11116</td><td>0.106524</td><td>0.134595</td></tr>
+<tr><td>512010</td><td>34</td><td>34</td><td>0</td><td>0.352941</td><td>0.0756128</td><td>0.0544054</td><td>0.100735</td></tr>
+<tr><td>512100</td><td>85</td><td>85</td><td>0</td><td>0.564706</td><td>0.0937915</td><td>0.0993134</td><td>0.113635</td></tr>
+<tr><td>512480</td><td>86</td><td>86</td><td>0</td><td>0.581395</td><td>0.205212</td><td>0.204185</td><td>0.234809</td></tr>
+<tr><td>512660</td><td>73</td><td>73</td><td>0</td><td>0.465753</td><td>0.146194</td><td>0.160101</td><td>0.169146</td></tr>
+<tr><td>512690</td><td>18</td><td>18</td><td>0</td><td>0.333333</td><td>0.0482348</td><td>0.0526578</td><td>0.0570152</td></tr>
+<tr><td>512760</td><td>22</td><td>22</td><td>0</td><td>0.863636</td><td>0.186772</td><td>0.196483</td><td>0.208882</td></tr>
+<tr><td>512800</td><td>88</td><td>88</td><td>0</td><td>0.397727</td><td>0.10127</td><td>0.107869</td><td>0.115008</td></tr>
+<tr><td>512880</td><td>30</td><td>30</td><td>0</td><td>0.2</td><td>0.140831</td><td>0.124674</td><td>0.152209</td></tr>
+<tr><td>515030</td><td>29</td><td>29</td><td>0</td><td>0.448276</td><td>0.201695</td><td>0.182378</td><td>0.223425</td></tr>
+<tr><td>588000</td><td>70</td><td>70</td><td>0</td><td>0.514286</td><td>0.19992</td><td>0.204071</td><td>0.229596</td></tr>
+<tr><td>588080</td><td>48</td><td>48</td><td>0</td><td>0.5625</td><td>0.207817</td><td>0.238339</td><td>0.242181</td></tr></tbody></table>
+    </section>
+    <section>
+      <h2>By Candidate Rank</h2>
+      <table><thead><tr><th>candidate_rank</th><th>case_count</th><th>success_count</th><th>fail_count</th><th>direction_accuracy</th><th>mean_abs_return_error</th><th>median_abs_return_error</th><th>rmse_return_error</th></tr></thead><tbody><tr><td>1</td><td>276</td><td>276</td><td>0</td><td>0.362319</td><td>0.187468</td><td>0.166868</td><td>0.218929</td></tr>
+<tr><td>2</td><td>274</td><td>274</td><td>0</td><td>0.390511</td><td>0.174658</td><td>0.155262</td><td>0.21643</td></tr>
+<tr><td>3</td><td>263</td><td>263</td><td>0</td><td>0.471483</td><td>0.143935</td><td>0.135302</td><td>0.179659</td></tr>
+<tr><td>4</td><td>263</td><td>263</td><td>0</td><td>0.395437</td><td>0.138458</td><td>0.111572</td><td>0.177574</td></tr>
+<tr><td>5</td><td>265</td><td>265</td><td>0</td><td>0.430189</td><td>0.138802</td><td>0.112527</td><td>0.17582</td></tr></tbody></table>
+    </section>
+    <section>
+      <h2>By Month</h2>
+      <table><thead><tr><th>month</th><th>case_count</th><th>success_count</th><th>fail_count</th><th>direction_accuracy</th><th>mean_abs_return_error</th><th>median_abs_return_error</th><th>rmse_return_error</th></tr></thead><tbody><tr><td>2025-03</td><td>80</td><td>80</td><td>0</td><td>0.625</td><td>0.070302</td><td>0.0576421</td><td>0.0920213</td></tr>
+<tr><td>2025-04</td><td>105</td><td>105</td><td>0</td><td>0.428571</td><td>0.0732982</td><td>0.0565714</td><td>0.0914628</td></tr>
+<tr><td>2025-05</td><td>95</td><td>95</td><td>0</td><td>0.431579</td><td>0.060086</td><td>0.0403971</td><td>0.0809276</td></tr>
+<tr><td>2025-06</td><td>100</td><td>100</td><td>0</td><td>0.35</td><td>0.103795</td><td>0.0956676</td><td>0.118227</td></tr>
+<tr><td>2025-07</td><td>115</td><td>115</td><td>0</td><td>0.104348</td><td>0.206263</td><td>0.202924</td><td>0.226086</td></tr>
+<tr><td>2025-08</td><td>105</td><td>105</td><td>0</td><td>0.0857143</td><td>0.319687</td><td>0.351945</td><td>0.341695</td></tr>
+<tr><td>2025-09</td><td>110</td><td>110</td><td>0</td><td>0.263636</td><td>0.313448</td><td>0.311829</td><td>0.318021</td></tr>
+<tr><td>2025-10</td><td>85</td><td>85</td><td>0</td><td>0.905882</td><td>0.164992</td><td>0.16249</td><td>0.180061</td></tr>
+<tr><td>2025-11</td><td>100</td><td>100</td><td>0</td><td>0.47</td><td>0.136194</td><td>0.117194</td><td>0.168595</td></tr>
+<tr><td>2025-12</td><td>115</td><td>115</td><td>0</td><td>0.0782609</td><td>0.195604</td><td>0.198628</td><td>0.218254</td></tr>
+<tr><td>2026-01</td><td>100</td><td>100</td><td>0</td><td>0.57</td><td>0.163707</td><td>0.166074</td><td>0.178037</td></tr>
+<tr><td>2026-02</td><td>70</td><td>70</td><td>0</td><td>0.928571</td><td>0.0697064</td><td>0.0546767</td><td>0.0923322</td></tr>
+<tr><td>2026-03</td><td>110</td><td>110</td><td>0</td><td>0.581818</td><td>0.0801333</td><td>0.0589623</td><td>0.103529</td></tr>
+<tr><td>2026-04</td><td>51</td><td>51</td><td>0</td><td>0.176471</td><td>0.1818</td><td>0.224482</td><td>0.206603</td></tr></tbody></table>
+    </section>
+    <section>
+      <h2>Data Sources</h2>
+      <table><thead><tr><th>source</th><th>path</th></tr></thead><tbody><tr><td>summary_json</td><td>E:\AETF-ModelLab\outputs\kronos_v12r_reconstructed_full_summary.json</td></tr>
+<tr><td>metrics_csv</td><td>E:\AETF-ModelLab\outputs\kronos_v12r_reconstructed_full_metrics.csv</td></tr>
+<tr><td>predictions_csv</td><td>E:\AETF-ModelLab\outputs\kronos_v12r_reconstructed_full_predictions.csv</td></tr>
+<tr><td>by_symbol_csv</td><td>E:\AETF-ModelLab\outputs\kronos_v12r_group_by_symbol.csv</td></tr>
+<tr><td>by_rank_csv</td><td>E:\AETF-ModelLab\outputs\kronos_v12r_group_by_candidate_rank.csv</td></tr>
+<tr><td>by_month_csv</td><td>E:\AETF-ModelLab\outputs\kronos_v12r_group_by_month.csv</td></tr></tbody></table>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,472 @@
+{
+  "schema_version": "v0.13-r",
+  "generated_at": "2026-06-04T15:40:56",
+  "title": "AETF ModelLab - Kronos Reconstructed Branch Dashboard V0.13-R",
+  "safety_banner": [
+    "Reconstructed branch only",
+    "Not formal V0.11",
+    "Not true left history",
+    "Not trading advice",
+    "No order execution",
+    "No writeback to left project",
+    "No training"
+  ],
+  "headline_metrics": {
+    "candidate_history_type": "reconstructed_not_true_left_snapshot",
+    "evaluated_case_count": 1341,
+    "success_count": 1341,
+    "fail_count": 0,
+    "direction_accuracy": 0.40939597315436244,
+    "mean_abs_return_error": 0.15708397727969794,
+    "median_abs_return_error": 0.1382922503969841,
+    "rmse_return_error": 0.19508706514643384
+  },
+  "baseline_comparison": {
+    "baseline_label": "V0.11-R 200-case baseline",
+    "full_expansion_label": "V0.12-R full expansion",
+    "baseline_direction_accuracy": 0.555,
+    "full_expansion_direction_accuracy": 0.40939597315436244,
+    "direction_accuracy_delta_vs_v11r": -0.1456040268456376,
+    "interpretation": "Full expansion did not confirm the 200-case baseline stability."
+  },
+  "group_by_symbol": [
+    {
+      "symbol": 159915,
+      "case_count": 155,
+      "success_count": 155,
+      "fail_count": 0,
+      "direction_accuracy": 0.1870967741935484,
+      "mean_abs_return_error": 0.2444868549428583,
+      "median_abs_return_error": 0.2435748429650226,
+      "rmse_return_error": 0.2677835135342014
+    },
+    {
+      "symbol": 159928,
+      "case_count": 20,
+      "success_count": 20,
+      "fail_count": 0,
+      "direction_accuracy": 0.5,
+      "mean_abs_return_error": 0.025059279522685,
+      "median_abs_return_error": 0.0175875649861412,
+      "rmse_return_error": 0.0313786369385233
+    },
+    {
+      "symbol": 159937,
+      "case_count": 124,
+      "success_count": 124,
+      "fail_count": 0,
+      "direction_accuracy": 0.4435483870967742,
+      "mean_abs_return_error": 0.1548958012907295,
+      "median_abs_return_error": 0.1453557873796495,
+      "rmse_return_error": 0.1720412102678175
+    },
+    {
+      "symbol": 159949,
+      "case_count": 127,
+      "success_count": 127,
+      "fail_count": 0,
+      "direction_accuracy": 0.1259842519685039,
+      "mean_abs_return_error": 0.3026165959837967,
+      "median_abs_return_error": 0.2951167694412835,
+      "rmse_return_error": 0.321119987641483
+    },
+    {
+      "symbol": 159992,
+      "case_count": 61,
+      "success_count": 61,
+      "fail_count": 0,
+      "direction_accuracy": 0.1475409836065573,
+      "mean_abs_return_error": 0.151916279795498,
+      "median_abs_return_error": 0.1404689300151269,
+      "rmse_return_error": 0.1760839976056085
+    },
+    {
+      "symbol": 159996,
+      "case_count": 11,
+      "success_count": 11,
+      "fail_count": 0,
+      "direction_accuracy": 0.5454545454545454,
+      "mean_abs_return_error": 0.061350887077522,
+      "median_abs_return_error": 0.0556452827822351,
+      "rmse_return_error": 0.0752661792067129
+    },
+    {
+      "symbol": 510050,
+      "case_count": 84,
+      "success_count": 84,
+      "fail_count": 0,
+      "direction_accuracy": 0.4761904761904761,
+      "mean_abs_return_error": 0.0489680012814732,
+      "median_abs_return_error": 0.0418419009360432,
+      "rmse_return_error": 0.0587806520152538
+    },
+    {
+      "symbol": 510300,
+      "case_count": 105,
+      "success_count": 105,
+      "fail_count": 0,
+      "direction_accuracy": 0.5333333333333333,
+      "mean_abs_return_error": 0.0559044812326571,
+      "median_abs_return_error": 0.0529581513898127,
+      "rmse_return_error": 0.0692301237467424
+    },
+    {
+      "symbol": 510500,
+      "case_count": 71,
+      "success_count": 71,
+      "fail_count": 0,
+      "direction_accuracy": 0.5915492957746479,
+      "mean_abs_return_error": 0.1111601593762895,
+      "median_abs_return_error": 0.1065238974552076,
+      "rmse_return_error": 0.1345952037435706
+    },
+    {
+      "symbol": 512010,
+      "case_count": 34,
+      "success_count": 34,
+      "fail_count": 0,
+      "direction_accuracy": 0.3529411764705882,
+      "mean_abs_return_error": 0.0756127903020682,
+      "median_abs_return_error": 0.0544054106765534,
+      "rmse_return_error": 0.1007349601000716
+    },
+    {
+      "symbol": 512100,
+      "case_count": 85,
+      "success_count": 85,
+      "fail_count": 0,
+      "direction_accuracy": 0.5647058823529412,
+      "mean_abs_return_error": 0.0937915025227957,
+      "median_abs_return_error": 0.09931337101253,
+      "rmse_return_error": 0.1136345631393282
+    },
+    {
+      "symbol": 512480,
+      "case_count": 86,
+      "success_count": 86,
+      "fail_count": 0,
+      "direction_accuracy": 0.5813953488372093,
+      "mean_abs_return_error": 0.2052117244239338,
+      "median_abs_return_error": 0.2041849719037352,
+      "rmse_return_error": 0.2348086685014453
+    },
+    {
+      "symbol": 512660,
+      "case_count": 73,
+      "success_count": 73,
+      "fail_count": 0,
+      "direction_accuracy": 0.4657534246575342,
+      "mean_abs_return_error": 0.1461943712771368,
+      "median_abs_return_error": 0.160100663648284,
+      "rmse_return_error": 0.1691458491059004
+    },
+    {
+      "symbol": 512690,
+      "case_count": 18,
+      "success_count": 18,
+      "fail_count": 0,
+      "direction_accuracy": 0.3333333333333333,
+      "mean_abs_return_error": 0.0482348355394348,
+      "median_abs_return_error": 0.0526578111993882,
+      "rmse_return_error": 0.0570151527612192
+    },
+    {
+      "symbol": 512760,
+      "case_count": 22,
+      "success_count": 22,
+      "fail_count": 0,
+      "direction_accuracy": 0.8636363636363636,
+      "mean_abs_return_error": 0.1867717520051825,
+      "median_abs_return_error": 0.1964832799944978,
+      "rmse_return_error": 0.2088816560976776
+    },
+    {
+      "symbol": 512800,
+      "case_count": 88,
+      "success_count": 88,
+      "fail_count": 0,
+      "direction_accuracy": 0.3977272727272727,
+      "mean_abs_return_error": 0.1012703788428866,
+      "median_abs_return_error": 0.1078686315277061,
+      "rmse_return_error": 0.1150084483781101
+    },
+    {
+      "symbol": 512880,
+      "case_count": 30,
+      "success_count": 30,
+      "fail_count": 0,
+      "direction_accuracy": 0.2,
+      "mean_abs_return_error": 0.1408307716823372,
+      "median_abs_return_error": 0.1246739636951653,
+      "rmse_return_error": 0.1522087115123759
+    },
+    {
+      "symbol": 515030,
+      "case_count": 29,
+      "success_count": 29,
+      "fail_count": 0,
+      "direction_accuracy": 0.4482758620689655,
+      "mean_abs_return_error": 0.2016948608490406,
+      "median_abs_return_error": 0.1823781860097778,
+      "rmse_return_error": 0.2234252583115163
+    },
+    {
+      "symbol": 588000,
+      "case_count": 70,
+      "success_count": 70,
+      "fail_count": 0,
+      "direction_accuracy": 0.5142857142857142,
+      "mean_abs_return_error": 0.1999196168371436,
+      "median_abs_return_error": 0.2040707166324639,
+      "rmse_return_error": 0.2295957885487352
+    },
+    {
+      "symbol": 588080,
+      "case_count": 48,
+      "success_count": 48,
+      "fail_count": 0,
+      "direction_accuracy": 0.5625,
+      "mean_abs_return_error": 0.2078169873589714,
+      "median_abs_return_error": 0.2383390469305295,
+      "rmse_return_error": 0.24218130070465
+    }
+  ],
+  "group_by_candidate_rank": [
+    {
+      "candidate_rank": 1,
+      "case_count": 276,
+      "success_count": 276,
+      "fail_count": 0,
+      "direction_accuracy": 0.3623188405797101,
+      "mean_abs_return_error": 0.1874680325635002,
+      "median_abs_return_error": 0.1668679661585237,
+      "rmse_return_error": 0.2189287638905371
+    },
+    {
+      "candidate_rank": 2,
+      "case_count": 274,
+      "success_count": 274,
+      "fail_count": 0,
+      "direction_accuracy": 0.3905109489051095,
+      "mean_abs_return_error": 0.1746580017515587,
+      "median_abs_return_error": 0.1552617188925064,
+      "rmse_return_error": 0.2164297691962164
+    },
+    {
+      "candidate_rank": 3,
+      "case_count": 263,
+      "success_count": 263,
+      "fail_count": 0,
+      "direction_accuracy": 0.4714828897338403,
+      "mean_abs_return_error": 0.143935374422055,
+      "median_abs_return_error": 0.1353019277878351,
+      "rmse_return_error": 0.1796585280578313
+    },
+    {
+      "candidate_rank": 4,
+      "case_count": 263,
+      "success_count": 263,
+      "fail_count": 0,
+      "direction_accuracy": 0.3954372623574144,
+      "mean_abs_return_error": 0.1384584389029518,
+      "median_abs_return_error": 0.1115724704132515,
+      "rmse_return_error": 0.1775737877355649
+    },
+    {
+      "candidate_rank": 5,
+      "case_count": 265,
+      "success_count": 265,
+      "fail_count": 0,
+      "direction_accuracy": 0.430188679245283,
+      "mean_abs_return_error": 0.1388021553213017,
+      "median_abs_return_error": 0.1125267296499203,
+      "rmse_return_error": 0.1758198429454691
+    }
+  ],
+  "group_by_month": [
+    {
+      "month": "2025-03",
+      "case_count": 80,
+      "success_count": 80,
+      "fail_count": 0,
+      "direction_accuracy": 0.625,
+      "mean_abs_return_error": 0.0703019524459,
+      "median_abs_return_error": 0.0576421096695311,
+      "rmse_return_error": 0.0920213064875875
+    },
+    {
+      "month": "2025-04",
+      "case_count": 105,
+      "success_count": 105,
+      "fail_count": 0,
+      "direction_accuracy": 0.4285714285714285,
+      "mean_abs_return_error": 0.0732981950336031,
+      "median_abs_return_error": 0.0565713624738181,
+      "rmse_return_error": 0.0914628172293484
+    },
+    {
+      "month": "2025-05",
+      "case_count": 95,
+      "success_count": 95,
+      "fail_count": 0,
+      "direction_accuracy": 0.431578947368421,
+      "mean_abs_return_error": 0.0600860119047028,
+      "median_abs_return_error": 0.0403970749253412,
+      "rmse_return_error": 0.0809275972074667
+    },
+    {
+      "month": "2025-06",
+      "case_count": 100,
+      "success_count": 100,
+      "fail_count": 0,
+      "direction_accuracy": 0.35,
+      "mean_abs_return_error": 0.1037948970383745,
+      "median_abs_return_error": 0.0956676178560826,
+      "rmse_return_error": 0.1182269140068697
+    },
+    {
+      "month": "2025-07",
+      "case_count": 115,
+      "success_count": 115,
+      "fail_count": 0,
+      "direction_accuracy": 0.1043478260869565,
+      "mean_abs_return_error": 0.2062625845757439,
+      "median_abs_return_error": 0.2029242149624939,
+      "rmse_return_error": 0.226086083877755
+    },
+    {
+      "month": "2025-08",
+      "case_count": 105,
+      "success_count": 105,
+      "fail_count": 0,
+      "direction_accuracy": 0.0857142857142857,
+      "mean_abs_return_error": 0.3196868950077248,
+      "median_abs_return_error": 0.3519451628560606,
+      "rmse_return_error": 0.3416947037708868
+    },
+    {
+      "month": "2025-09",
+      "case_count": 110,
+      "success_count": 110,
+      "fail_count": 0,
+      "direction_accuracy": 0.2636363636363636,
+      "mean_abs_return_error": 0.3134480784806175,
+      "median_abs_return_error": 0.3118286754150265,
+      "rmse_return_error": 0.3180207689579312
+    },
+    {
+      "month": "2025-10",
+      "case_count": 85,
+      "success_count": 85,
+      "fail_count": 0,
+      "direction_accuracy": 0.9058823529411764,
+      "mean_abs_return_error": 0.1649921890013941,
+      "median_abs_return_error": 0.1624898581682449,
+      "rmse_return_error": 0.1800611245590809
+    },
+    {
+      "month": "2025-11",
+      "case_count": 100,
+      "success_count": 100,
+      "fail_count": 0,
+      "direction_accuracy": 0.47,
+      "mean_abs_return_error": 0.136194443172107,
+      "median_abs_return_error": 0.1171936684057552,
+      "rmse_return_error": 0.1685952044042391
+    },
+    {
+      "month": "2025-12",
+      "case_count": 115,
+      "success_count": 115,
+      "fail_count": 0,
+      "direction_accuracy": 0.0782608695652174,
+      "mean_abs_return_error": 0.1956039171439976,
+      "median_abs_return_error": 0.1986282974341666,
+      "rmse_return_error": 0.2182536350857262
+    },
+    {
+      "month": "2026-01",
+      "case_count": 100,
+      "success_count": 100,
+      "fail_count": 0,
+      "direction_accuracy": 0.57,
+      "mean_abs_return_error": 0.1637071797467723,
+      "median_abs_return_error": 0.1660743090949618,
+      "rmse_return_error": 0.1780367734305101
+    },
+    {
+      "month": "2026-02",
+      "case_count": 70,
+      "success_count": 70,
+      "fail_count": 0,
+      "direction_accuracy": 0.9285714285714286,
+      "mean_abs_return_error": 0.0697063581321586,
+      "median_abs_return_error": 0.0546766578297513,
+      "rmse_return_error": 0.0923322114457719
+    },
+    {
+      "month": "2026-03",
+      "case_count": 110,
+      "success_count": 110,
+      "fail_count": 0,
+      "direction_accuracy": 0.5818181818181818,
+      "mean_abs_return_error": 0.0801333284853472,
+      "median_abs_return_error": 0.0589622502448615,
+      "rmse_return_error": 0.103529298287558
+    },
+    {
+      "month": "2026-04",
+      "case_count": 51,
+      "success_count": 51,
+      "fail_count": 0,
+      "direction_accuracy": 0.1764705882352941,
+      "mean_abs_return_error": 0.1818003168038296,
+      "median_abs_return_error": 0.2244822501870433,
+      "rmse_return_error": 0.2066032479075309
+    }
+  ],
+  "diagnostics": {
+    "mode": "reconstructed_branch_dashboard",
+    "candidate_history_type": "reconstructed_not_true_left_snapshot",
+    "evaluated_case_count": 1341,
+    "success_count": 1341,
+    "fail_count": 0,
+    "direction_accuracy": 0.40939597315436244,
+    "v11r_baseline_direction_accuracy": 0.555,
+    "direction_accuracy_delta_vs_v11r": -0.1456040268456376,
+    "mean_abs_return_error": 0.15708397727969794,
+    "median_abs_return_error": 0.1382922503969841,
+    "rmse_return_error": 0.19508706514643384,
+    "performance_interpretation": [
+      "UNDER_50_PERCENT_DIRECTION_ACCURACY",
+      "V11R_BASELINE_NOT_STABLE",
+      "ENGINEERING_PIPELINE_STABLE"
+    ],
+    "stability_warning": "FULL_EXPANSION_DID_NOT_CONFIRM_V11R_200_CASE_BASELINE_STABILITY",
+    "formal_v011_ready": false,
+    "reconstructed_branch_only": true,
+    "zero_shot": true,
+    "no_training": true,
+    "no_torchrun": true,
+    "no_gpu_call": true,
+    "no_checkpoint": true,
+    "not_trading_advice": true,
+    "execution_allowed": false,
+    "left_project_writeback_allowed": false,
+    "recommended_next_step": "Proceed to V0.14-R reconstructed error diagnostics or stop-line review; do not enter formal V0.11.",
+    "warnings": [
+      "Reconstructed candidate history is not true left history and does not represent formal V0.11 left-side historical candidate performance.",
+      "V0.12-R full expansion did not confirm the V0.11-R 200-case baseline stability.",
+      "Current direction_accuracy=0.4094 does not support any market conclusion.",
+      "This is V0.13-R, not formal V0.13."
+    ]
+  },
+  "data_sources": {
+    "summary_json": "E:\\AETF-ModelLab\\outputs\\kronos_v12r_reconstructed_full_summary.json",
+    "metrics_csv": "E:\\AETF-ModelLab\\outputs\\kronos_v12r_reconstructed_full_metrics.csv",
+    "predictions_csv": "E:\\AETF-ModelLab\\outputs\\kronos_v12r_reconstructed_full_predictions.csv",
+    "by_symbol_csv": "E:\\AETF-ModelLab\\outputs\\kronos_v12r_group_by_symbol.csv",
+    "by_rank_csv": "E:\\AETF-ModelLab\\outputs\\kronos_v12r_group_by_candidate_rank.csv",
+    "by_month_csv": "E:\\AETF-ModelLab\\outputs\\kronos_v12r_group_by_month.csv"
+  }
+}
