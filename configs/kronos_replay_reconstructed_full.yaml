@@ -1,0 +1,53 @@
+mode: "reconstructed_zero_shot_replay_full_expansion"
+
+inputs:
+  replay_cases_path: "data/real/replay/kronos_v10_reconstructed_replay_cases.csv"
+  reconstructed_readiness_path: "outputs/real_data/kronos_v10_reconstructed_replay_readiness.json"
+  prior_v11r_summary_path: "outputs/kronos_v11r_reconstructed_replay_summary.json"
+
+outputs:
+  predictions_path: "outputs/kronos_v12r_reconstructed_full_predictions.csv"
+  metrics_path: "outputs/kronos_v12r_reconstructed_full_metrics.csv"
+  summary_json_path: "outputs/kronos_v12r_reconstructed_full_summary.json"
+  group_by_symbol_path: "outputs/kronos_v12r_group_by_symbol.csv"
+  group_by_rank_path: "outputs/kronos_v12r_group_by_candidate_rank.csv"
+  group_by_month_path: "outputs/kronos_v12r_group_by_month.csv"
+  progress_path: "outputs/kronos_v12r_reconstructed_progress.json"
+  report_path: "docs/kronos_v12r_reconstructed_expansion_report.md"
+  design_doc_path: "docs/kronos_v12r_reconstructed_expansion_design.md"
+
+adapter:
+  model_name: "NeoQuasar/Kronos-small"
+  tokenizer_name: "NeoQuasar/Kronos-Tokenizer-base"
+  device: "cuda:0"
+  max_context: 512
+  hf_cache_dir: "models/kronos/hf_cache"
+
+inference:
+  lookback: 120
+  pred_len: 24
+  sample_count: 1
+  T: 1.0
+  top_p: 0.9
+  batch_size_cases: 100
+  max_cases: null
+  resume: true
+
+evaluation:
+  candidate_history_type: "reconstructed_not_true_left_snapshot"
+  allow_formal_v011_claim: false
+  allow_reconstructed_branch_claim: true
+  require_no_lookahead_bias: true
+  group_by_symbol: true
+  group_by_candidate_rank: true
+  group_by_month: true
+  compare_to_v11r_200_case_baseline: true
+
+safety:
+  allow_training: false
+  allow_torchrun: false
+  allow_tokenizer_finetune: false
+  allow_full_finetune: false
+  allow_trading_advice: false
+  allow_order_execution: false
+  allow_writeback_to_left_project: false

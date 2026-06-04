@@ -1,0 +1,11 @@
+{
+  "mode": "reconstructed_zero_shot_replay_full_expansion",
+  "updated_at": "2026-06-04T15:22:19",
+  "total_available_cases": 1341,
+  "completed_case_count": 1341,
+  "newly_evaluated_case_count": 1341,
+  "reconstructed_v012r_ready": true,
+  "zero_shot": true,
+  "no_training": true,
+  "no_torchrun": true
+}
