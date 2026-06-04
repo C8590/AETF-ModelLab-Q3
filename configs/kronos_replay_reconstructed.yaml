@@ -1,0 +1,44 @@
+mode: "reconstructed_zero_shot_replay"
+
+inputs:
+  replay_cases_path: "data/real/replay/kronos_v10_reconstructed_replay_cases.csv"
+  reconstructed_readiness_path: "outputs/real_data/kronos_v10_reconstructed_replay_readiness.json"
+
+outputs:
+  predictions_path: "outputs/kronos_v11r_reconstructed_replay_predictions.csv"
+  metrics_path: "outputs/kronos_v11r_reconstructed_replay_metrics.csv"
+  summary_json_path: "outputs/kronos_v11r_reconstructed_replay_summary.json"
+  report_path: "docs/kronos_v11r_reconstructed_replay_report.md"
+  design_doc_path: "docs/kronos_v11r_reconstructed_replay_design.md"
+
+adapter:
+  model_name: "NeoQuasar/Kronos-small"
+  tokenizer_name: "NeoQuasar/Kronos-Tokenizer-base"
+  device: "cuda:0"
+  max_context: 512
+  hf_cache_dir: "models/kronos/hf_cache"
+
+inference:
+  lookback: 120
+  pred_len: 24
+  sample_count: 1
+  T: 1.0
+  top_p: 0.9
+  max_cases: 200
+
+evaluation:
+  candidate_history_type: "reconstructed_not_true_left_snapshot"
+  allow_formal_v011_claim: false
+  allow_reconstructed_branch_claim: true
+  require_no_lookahead_bias: true
+  group_by_symbol: true
+  group_by_candidate_rank: true
+
+safety:
+  allow_training: false
+  allow_torchrun: false
+  allow_tokenizer_finetune: false
+  allow_full_finetune: false
+  allow_trading_advice: false
+  allow_order_execution: false
+  allow_writeback_to_left_project: false

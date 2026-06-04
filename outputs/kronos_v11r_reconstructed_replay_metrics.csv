@@ -1,0 +1,2 @@
+﻿case_count,success_count,fail_count,direction_match_count,direction_accuracy,mean_abs_return_error,median_abs_return_error,rmse_return_error,mean_pred_return_last,mean_actual_return_last
+200,200,0,111,0.555,0.06988062957852337,0.05156520296983658,0.0913133653438696,-0.044348236024379734,-0.012181891811555646

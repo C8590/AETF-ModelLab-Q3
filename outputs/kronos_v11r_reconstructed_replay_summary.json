@@ -1,0 +1,187 @@
+{
+  "mode": "reconstructed_zero_shot_replay",
+  "candidate_history_type": "reconstructed_not_true_left_snapshot",
+  "evaluated_case_count": 200,
+  "success_count": 200,
+  "fail_count": 0,
+  "direction_accuracy": 0.555,
+  "mean_abs_return_error": 0.06988062957852337,
+  "median_abs_return_error": 0.05156520296983658,
+  "rmse_return_error": 0.0913133653438696,
+  "formal_v011_ready": false,
+  "reconstructed_v011_ready": true,
+  "no_training": true,
+  "no_torchrun": true,
+  "zero_shot": true,
+  "no_checkpoint": true,
+  "no_left_project_connection": true,
+  "warnings": [
+    "Reconstructed candidate history is not true left-side historical candidate data.",
+    "V0.11-R results cannot represent true left project historical candidate performance.",
+    "This is not formal V0.11 and must not be used as a trading basis."
+  ],
+  "next_step": "Proceed to V0.12-R reconstructed branch display or extended evaluation.",
+  "group_metrics": {
+    "by_symbol": [
+      {
+        "symbol": "159915",
+        "success_count": 1,
+        "direction_accuracy": 1.0,
+        "mean_abs_return_error": 0.016702281481501213,
+        "rmse_return_error": 0.016702281481501213
+      },
+      {
+        "symbol": "159928",
+        "success_count": 20,
+        "direction_accuracy": 0.8,
+        "mean_abs_return_error": 0.022049051218522426,
+        "rmse_return_error": 0.02848854087105811
+      },
+      {
+        "symbol": "159937",
+        "success_count": 32,
+        "direction_accuracy": 0.4375,
+        "mean_abs_return_error": 0.17113637251229816,
+        "rmse_return_error": 0.1753908812882061
+      },
+      {
+        "symbol": "159992",
+        "success_count": 14,
+        "direction_accuracy": 0.5,
+        "mean_abs_return_error": 0.06136876075440824,
+        "rmse_return_error": 0.07732145095307431
+      },
+      {
+        "symbol": "159996",
+        "success_count": 5,
+        "direction_accuracy": 1.0,
+        "mean_abs_return_error": 0.022979051364044857,
+        "rmse_return_error": 0.02599833889144411
+      },
+      {
+        "symbol": "510050",
+        "success_count": 26,
+        "direction_accuracy": 0.46153846153846156,
+        "mean_abs_return_error": 0.03100632118418541,
+        "rmse_return_error": 0.034626276262414976
+      },
+      {
+        "symbol": "510300",
+        "success_count": 3,
+        "direction_accuracy": 1.0,
+        "mean_abs_return_error": 0.009222365999756565,
+        "rmse_return_error": 0.012077191298358762
+      },
+      {
+        "symbol": "510500",
+        "success_count": 2,
+        "direction_accuracy": 0.5,
+        "mean_abs_return_error": 0.05036997798233073,
+        "rmse_return_error": 0.06635065640526241
+      },
+      {
+        "symbol": "512010",
+        "success_count": 2,
+        "direction_accuracy": 0.5,
+        "mean_abs_return_error": 0.04849926773571289,
+        "rmse_return_error": 0.049925504667035915
+      },
+      {
+        "symbol": "512100",
+        "success_count": 11,
+        "direction_accuracy": 0.7272727272727273,
+        "mean_abs_return_error": 0.05032570950181737,
+        "rmse_return_error": 0.05479197947978823
+      },
+      {
+        "symbol": "512480",
+        "success_count": 14,
+        "direction_accuracy": 0.7142857142857143,
+        "mean_abs_return_error": 0.048291848620029075,
+        "rmse_return_error": 0.0615152198114583
+      },
+      {
+        "symbol": "512660",
+        "success_count": 7,
+        "direction_accuracy": 0.2857142857142857,
+        "mean_abs_return_error": 0.07127387519372899,
+        "rmse_return_error": 0.07606468624599534
+      },
+      {
+        "symbol": "512690",
+        "success_count": 17,
+        "direction_accuracy": 0.6470588235294118,
+        "mean_abs_return_error": 0.0409043566042055,
+        "rmse_return_error": 0.054582192116594784
+      },
+      {
+        "symbol": "512760",
+        "success_count": 3,
+        "direction_accuracy": 0.6666666666666666,
+        "mean_abs_return_error": 0.10776891213152902,
+        "rmse_return_error": 0.12039725077086309
+      },
+      {
+        "symbol": "512800",
+        "success_count": 20,
+        "direction_accuracy": 0.1,
+        "mean_abs_return_error": 0.09213702794819977,
+        "rmse_return_error": 0.09638346337620522
+      },
+      {
+        "symbol": "588000",
+        "success_count": 14,
+        "direction_accuracy": 0.5714285714285714,
+        "mean_abs_return_error": 0.05716640467753174,
+        "rmse_return_error": 0.06668833140629543
+      },
+      {
+        "symbol": "588080",
+        "success_count": 9,
+        "direction_accuracy": 0.8888888888888888,
+        "mean_abs_return_error": 0.07179044524233819,
+        "rmse_return_error": 0.08534755077944478
+      }
+    ],
+    "by_candidate_rank": [
+      {
+        "candidate_rank": "1",
+        "success_count": 40,
+        "direction_accuracy": 0.525,
+        "mean_abs_return_error": 0.13107155212302463,
+        "rmse_return_error": 0.14472707056859824
+      },
+      {
+        "candidate_rank": "2",
+        "success_count": 40,
+        "direction_accuracy": 0.725,
+        "mean_abs_return_error": 0.05197589802342924,
+        "rmse_return_error": 0.0778056654709737
+      },
+      {
+        "candidate_rank": "3",
+        "success_count": 40,
+        "direction_accuracy": 0.55,
+        "mean_abs_return_error": 0.056282703734843065,
+        "rmse_return_error": 0.07313141996401765
+      },
+      {
+        "candidate_rank": "4",
+        "success_count": 40,
+        "direction_accuracy": 0.425,
+        "mean_abs_return_error": 0.05840946013842766,
+        "rmse_return_error": 0.07086925633730645
+      },
+      {
+        "candidate_rank": "5",
+        "success_count": 40,
+        "direction_accuracy": 0.55,
+        "mean_abs_return_error": 0.05166353387289224,
+        "rmse_return_error": 0.065729375758557
+      }
+    ],
+    "fail_reasons": []
+  },
+  "pytest_status": "PASS",
+  "pytest_summary": "125 passed in 2.44s"
+}
