@@ -1,0 +1,29 @@
+{
+  "mode": "true_left_candidate_history_aggregation",
+  "generated_at": "2026-06-04T17:05:48",
+  "result": {
+    "aggregation_status": "SNAPSHOT_DIR_EMPTY",
+    "snapshot_dir": "E:/AETF-ModelLab/data/real/raw/candidates/snapshots",
+    "snapshot_count": 0,
+    "snapshot_files": [],
+    "aggregated_history_path": "E:/AETF-ModelLab/data/real/raw/candidates/left_candidates_history.csv",
+    "aggregation_report_path": "E:/AETF-ModelLab/docs/true_left_candidate_history_aggregation_report.md",
+    "aggregation_manifest_path": "E:/AETF-ModelLab/outputs/real_data/true_left_candidate_history_aggregation_manifest.json",
+    "row_count": 0,
+    "candidate_date_count": 0,
+    "symbol_count": 0,
+    "history_file_created": false,
+    "warnings": [
+      "snapshot directory has no *_left_candidates.csv files; no history file was generated."
+    ],
+    "errors": [],
+    "can_enter_formal_v011": false
+  },
+  "scope": {
+    "no_model_training": true,
+    "no_torchrun": true,
+    "no_gpu_use": true,
+    "no_left_project_access": true,
+    "csv_read_only": true
+  }
+}

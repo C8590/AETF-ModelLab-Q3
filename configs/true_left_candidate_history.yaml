@@ -1,0 +1,19 @@
+mode: "true_left_candidate_history_aggregation"
+
+inputs:
+  snapshot_dir: "data/real/raw/candidates/snapshots"
+
+outputs:
+  aggregated_history_path: "data/real/raw/candidates/left_candidates_history.csv"
+  aggregation_report_path: "docs/true_left_candidate_history_aggregation_report.md"
+  aggregation_manifest_path: "outputs/real_data/true_left_candidate_history_aggregation_manifest.json"
+
+thresholds:
+  min_candidate_dates_for_formal_v011: 100
+  min_replay_cases_for_formal_v011: 200
+
+safety:
+  allow_reconstructed_as_true_history: false
+  allow_writeback_to_left_project: false
+  allow_trading_advice: false
+  allow_order_execution: false
