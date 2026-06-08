@@ -1,4 +1,5 @@
 runtime_inbox/
+runtime_intake/
 outputs/
 __pycache__/
 *.py[cod]
