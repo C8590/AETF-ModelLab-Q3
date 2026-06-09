@@ -14,6 +14,16 @@ modellab-v1-4-h-reconstructed-artifact-intake
 0f13f1deebf42cc7366ff3a8510155194b88e1b1
 ```
 
+说明：该 hash 是被审查的开发侧 intake commit。复审开始时，远端分支
+`modellab-v1-4-h-reconstructed-artifact-intake` 的 HEAD 已推进到已有复审提交：
+
+```text
+b60deb5ea256ae01b2898d28e0bb831b6cf75a86
+```
+
+因此本报告按开发侧 commit `0f13f1deebf42cc7366ff3a8510155194b88e1b1`
+审查 intake 改动范围，并同时确认当前分支额外包含本复审报告文件。
+
 远端：
 
 ```text
@@ -26,15 +36,21 @@ origin https://github.com/C8590/AETF-ModelLab-Q3.git
 ## modellab-v1-4-h-reconstructed-artifact-intake...origin/modellab-v1-4-h-reconstructed-artifact-intake
 ```
 
-HEAD 已确认等于目标 commit：
+开发侧 intake commit 已确认存在于当前分支历史：
 
 ```text
 0f13f1deebf42cc7366ff3a8510155194b88e1b1
 ```
 
+复审开始时分支 HEAD：
+
+```text
+b60deb5ea256ae01b2898d28e0bb831b6cf75a86
+```
+
 ## 改动范围摘要
 
-`main...modellab-v1-4-h-reconstructed-artifact-intake` 的改动范围为：
+`main...0f13f1deebf42cc7366ff3a8510155194b88e1b1` 的开发侧改动范围为：
 
 ```text
 .gitignore
@@ -46,6 +62,12 @@ diff stat：
 
 ```text
 3 files changed, 396 insertions(+)
+```
+
+当前分支相对 `main` 额外包含本复审报告：
+
+```text
+docs/review_reconstructed_artifact_intake_v1_4_h.md
 ```
 
 确认事项：
