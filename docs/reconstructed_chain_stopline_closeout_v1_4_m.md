@@ -96,7 +96,7 @@ symbol/candidate-id exact alignment exists.
 
 A5 is not outcome-based evaluation. A5 cannot support `formal_v011`, model
 learning workloads, accelerator execution, distributed model launch, main
-project integration, trading conclusions, or `formal_v011_ready = true`.
+project integration, trading conclusions, or formal readiness.
 
 ## Final Closeout State
 
