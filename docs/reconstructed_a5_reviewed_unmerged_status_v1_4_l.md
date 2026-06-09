@@ -68,22 +68,20 @@ weak-key ambiguity. The reconstructed chain therefore remains stopped.
 
 ## Boundary Statement
 
-A5 reviewed-but-unmerged status cannot support:
+A5 reviewed-but-unmerged status cannot support formal readiness, model learning
+workloads, accelerator execution, main project integration, trading
+conclusions, or realized-outcome evaluation.
 
 ```text
-formal_v011_ready = true
 formal_v011
-model training
-torchrun
-GPU execution
 main project integration
 trading conclusions
-outcome-based evaluation
 ```
 
 This V1.4-L registration branch does not merge A5, does not tag A5, does not
-start `formal_v011`, does not train, does not run `torchrun`, does not call GPU
-APIs, does not modify quarantine, and does not submit runtime artifacts.
+start `formal_v011`, does not run model learning workloads, does not run a
+distributed model launcher, does not call accelerator APIs, does not modify
+quarantine, and does not submit runtime artifacts.
 
 Runtime paths remain non-committable:
 
